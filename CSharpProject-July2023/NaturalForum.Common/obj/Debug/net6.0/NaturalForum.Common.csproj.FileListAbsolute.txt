@@ -1,0 +1,12 @@
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\bin\Debug\net6.0\NaturalForum.Common.deps.json
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\bin\Debug\net6.0\NaturalForum.Common.dll
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\bin\Debug\net6.0\ref\NaturalForum.Common.dll
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\bin\Debug\net6.0\NaturalForum.Common.pdb
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\NaturalForum.Common.csproj.AssemblyReference.cache
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\NaturalForum.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\NaturalForum.Common.AssemblyInfoInputs.cache
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\NaturalForum.Common.AssemblyInfo.cs
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\NaturalForum.Common.csproj.CoreCompileInputs.cache
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\NaturalForum.Common.dll
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\ref\NaturalForum.Common.dll
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\NaturalForum.Common.pdb

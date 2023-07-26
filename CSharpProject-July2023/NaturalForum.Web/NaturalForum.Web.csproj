@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-NaturalForum.Web-36C55161-B7FC-4E89-B907-74F033275A48</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NaturalForum.Common\NaturalForum.Common.csproj" />
+    <ProjectReference Include="..\NaturalForum.Data.Models\NaturalForum.Data.Models.csproj" />
+    <ProjectReference Include="..\NaturalForum.Data\NaturalForum.Data.csproj" />
+    <ProjectReference Include="..\NaturalForum.Web.ViewModels\NaturalForum.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

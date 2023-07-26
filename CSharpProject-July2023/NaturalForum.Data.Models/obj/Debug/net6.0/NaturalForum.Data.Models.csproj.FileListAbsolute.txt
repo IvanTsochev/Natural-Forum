@@ -1,0 +1,15 @@
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\bin\Debug\net6.0\NaturalForum.Data.Models.deps.json
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\bin\Debug\net6.0\NaturalForum.Data.Models.dll
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\bin\Debug\net6.0\ref\NaturalForum.Data.Models.dll
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\bin\Debug\net6.0\NaturalForum.Data.Models.pdb
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\bin\Debug\net6.0\NaturalForum.Common.dll
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\bin\Debug\net6.0\NaturalForum.Common.pdb
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\obj\Debug\net6.0\NaturalForum.Data.Models.csproj.AssemblyReference.cache
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\obj\Debug\net6.0\NaturalForum.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\obj\Debug\net6.0\NaturalForum.Data.Models.AssemblyInfoInputs.cache
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\obj\Debug\net6.0\NaturalForum.Data.Models.AssemblyInfo.cs
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\obj\Debug\net6.0\NaturalForum.Data.Models.csproj.CoreCompileInputs.cache
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\obj\Debug\net6.0\NaturalForum.Data.Models.csproj.CopyComplete
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\obj\Debug\net6.0\NaturalForum.Data.Models.dll
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\obj\Debug\net6.0\ref\NaturalForum.Data.Models.dll
+D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data.Models\obj\Debug\net6.0\NaturalForum.Data.Models.pdb
