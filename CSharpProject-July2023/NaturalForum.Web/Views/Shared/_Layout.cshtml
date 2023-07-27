@@ -12,9 +12,9 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light" style="background-color: #4CAF50;">
 			<div class="container-fluid">
-				<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Natural Forum</a>
+				<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="color: #ffffff;">Natural Forum</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -22,18 +22,30 @@
 				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 					<ul class="navbar-nav flex-grow-1">
 						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="" asp-controller="Tree" asp-action="All">Trees</a>
+							<a class="nav-link text-dark" asp-area="" asp-controller="Tree" asp-action="All" style="color: #ffffff;"
+							   onmouseover="this.style.backgroundColor='#45a049'; this.style.color='#ffffff';"
+							   onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';"
+							   onclick="this.style.backgroundColor='#4CAF50'; this.style.color='#ff0000';">Trees</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="" asp-controller="Animal" asp-action="All">Animals</a>
+							<a class="nav-link text-dark" asp-area="" asp-controller="Animal" asp-action="All" style="color: #ffffff;"
+							   onmouseover="this.style.backgroundColor='#45a049'; this.style.color='#ffffff';"
+							   onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';"
+							   onclick="this.style.backgroundColor='#4CAF50'; this.style.color='#ff0000';">Animals</a>
 						</li>
-						@if(this.User.Identity?.IsAuthenticated ?? false)
+						@if (this.User.Identity?.IsAuthenticated ?? false)
 						{
 							<li class="nav-item">
-								<a class="nav-link text-dark" asp-area="" asp-controller="Article" asp-action="All">Articles</a>
+								<a class="nav-link text-dark" asp-area="" asp-controller="Article" asp-action="All" style="color: #ffffff;"
+							   onmouseover="this.style.backgroundColor='#45a049'; this.style.color='#ffffff';"
+							   onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';"
+							   onclick="this.style.backgroundColor='#4CAF50'; this.style.color='#ff0000';">Articles</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" asp-area="" asp-controller="Article" asp-action="Create">Create article</a>
+								<a class="nav-link text-dark" asp-area="" asp-controller="Article" asp-action="Create" style="color: #ffffff;"
+							   onmouseover="this.style.backgroundColor='#45a049'; this.style.color='#ffffff';"
+							   onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';"
+							   onclick="this.style.backgroundColor='#4CAF50'; this.style.color='#ff0000';">Create article</a>
 							</li>
 						}
 					</ul>
@@ -48,12 +60,13 @@
 		</main>
 	</div>
 
-	<footer class="border-top footer text-muted">
+	<footer class="border-top footer text-white" style="background-color: #4CAF50; padding: 10px 0;">
 		<div class="container">
 			&copy; Natural Forum @ReleaseYear
 			@if (DateTime.UtcNow.Year != ReleaseYear)
 			{
-				@Html.Raw($" - {DateTime.UtcNow.Year}");
+				@Html.Raw($" - {DateTime.UtcNow.Year}")
+				;
 			}
 		</div>
 	</footer>
