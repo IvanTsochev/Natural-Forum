@@ -144,3 +144,8 @@ D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web\obj\Debug\net6.0
 D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web\obj\Debug\net6.0\ref\NaturalForum.Web.dll
 D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web\obj\Debug\net6.0\NaturalForum.Web.pdb
 D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web\obj\Debug\net6.0\NaturalForum.Web.genruntimeconfig.cache
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web\bin\Debug\net6.0\NaturalForum.Services.Data.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web\bin\Debug\net6.0\NaturalForum.Web.Infrastructure.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web\bin\Debug\net6.0\NaturalForum.Services.Data.pdb
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web\bin\Debug\net6.0\NaturalForum.Web.Infrastructure.pdb

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RdeRgL/xArpVMGYJWhC/WMdg6zgsKW1uM46IV6hh7clQ24CC82iUgfVIz/2KQhqywrObxnXVyBoxXmiY4FyHMw==",
+  "dgSpecHash": "4xEhbBPfKqTYob5o82L9d9jZ64hFWE7M+mWdx2Lg8+urjRSzUUCE0RPt5pmolCrGkY0wbrwTrvsYZ8Zm28bRiQ==",
   "success": true,
   "projectFilePath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web\\NaturalForum.Web.csproj",
   "expectedPackageFiles": [
@@ -24,7 +24,7 @@
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.0\\microsoft.extensions.caching.memory.6.0.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
-    "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\6.0.0\\microsoft.extensions.fileproviders.embedded.6.0.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.0\\microsoft.extensions.identity.core.6.0.0.nupkg.sha512",

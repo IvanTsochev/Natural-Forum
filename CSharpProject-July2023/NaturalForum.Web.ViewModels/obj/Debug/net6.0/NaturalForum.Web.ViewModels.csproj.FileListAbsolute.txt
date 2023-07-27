@@ -13,3 +13,18 @@ D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum
 D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Web.ViewModels\bin\Debug\net6.0\NaturalForum.Common.pdb
 D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\NaturalForum.Web.ViewModels.csproj.AssemblyReference.cache
 D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\NaturalForum.Web.ViewModels.csproj.CopyComplete
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\bin\Debug\net6.0\NaturalForum.Web.ViewModels.deps.json
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\bin\Debug\net6.0\NaturalForum.Web.ViewModels.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\bin\Debug\net6.0\ref\NaturalForum.Web.ViewModels.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\bin\Debug\net6.0\NaturalForum.Web.ViewModels.pdb
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\bin\Debug\net6.0\NaturalForum.Common.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\bin\Debug\net6.0\NaturalForum.Common.pdb
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\NaturalForum.Web.ViewModels.csproj.AssemblyReference.cache
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\NaturalForum.Web.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\NaturalForum.Web.ViewModels.AssemblyInfoInputs.cache
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\NaturalForum.Web.ViewModels.AssemblyInfo.cs
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\NaturalForum.Web.ViewModels.csproj.CoreCompileInputs.cache
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\NaturalForum.Web.ViewModels.csproj.CopyComplete
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\NaturalForum.Web.ViewModels.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\ref\NaturalForum.Web.ViewModels.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Web.ViewModels\obj\Debug\net6.0\NaturalForum.Web.ViewModels.pdb

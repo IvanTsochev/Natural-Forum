@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 
 using NaturalForum.Data;
 using NaturalForum.Data.Models;
+using NaturalForum.Services.Data.Interfaces;
+using NaturalForum.Web.Infrastructure.Extensions;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,8 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
         builder.Configuration.GetValue<int>("Identity:Password:RequiredLength");
 })
     .AddEntityFrameworkStores<NaturalForumDbContext>();
+
+builder.Services.AddApplicationServices(typeof(ITreeService));
 
 builder.Services.AddControllersWithViews();
 

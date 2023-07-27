@@ -3,19 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalForum.Web", "NaturalForum.Web\NaturalForum.Web.csproj", "{F1AD270E-5CA6-4FE0-A891-31FFA4A8BE4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalForum.Web", "NaturalForum.Web\NaturalForum.Web.csproj", "{F1AD270E-5CA6-4FE0-A891-31FFA4A8BE4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalForum.Common", "NaturalForum.Common\NaturalForum.Common.csproj", "{39004B89-BAA2-425D-B432-F70F92FC8793}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalForum.Common", "NaturalForum.Common\NaturalForum.Common.csproj", "{39004B89-BAA2-425D-B432-F70F92FC8793}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{1314BD04-01B7-4B58-B82D-8380D09DE55F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{04AB0E3E-0116-46C0-B332-BB6E05192684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalForum.Data", "NaturalForum.Data\NaturalForum.Data.csproj", "{6D6AB277-8DF5-4E13-A2C4-8111B5BE350F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalForum.Data", "NaturalForum.Data\NaturalForum.Data.csproj", "{6D6AB277-8DF5-4E13-A2C4-8111B5BE350F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalForum.Data.Models", "NaturalForum.Data.Models\NaturalForum.Data.Models.csproj", "{F1A675B9-56C5-43D7-922D-1E0C530EFBD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalForum.Data.Models", "NaturalForum.Data.Models\NaturalForum.Data.Models.csproj", "{F1A675B9-56C5-43D7-922D-1E0C530EFBD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalForum.Web.ViewModels", "NaturalForum.Web.ViewModels\NaturalForum.Web.ViewModels.csproj", "{E9FF63C2-28AD-4097-ADC8-EC0DF83C80BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalForum.Web.ViewModels", "NaturalForum.Web.ViewModels\NaturalForum.Web.ViewModels.csproj", "{E9FF63C2-28AD-4097-ADC8-EC0DF83C80BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3E3C2A33-BCE6-4272-ADE9-CB6F6891E451}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalForum.Services.Data", "NaturalForum.Services.Data\NaturalForum.Services.Data.csproj", "{81FA1DAA-6D3D-4D05-BD37-EC581731B5E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalForum.Web.Infrastructure", "NaturalForum.Web.Infrastructure\NaturalForum.Web.Infrastructure.csproj", "{6DDF21AF-D176-42E3-8232-F2746A6E4466}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +49,14 @@ Global
 		{E9FF63C2-28AD-4097-ADC8-EC0DF83C80BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9FF63C2-28AD-4097-ADC8-EC0DF83C80BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9FF63C2-28AD-4097-ADC8-EC0DF83C80BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81FA1DAA-6D3D-4D05-BD37-EC581731B5E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81FA1DAA-6D3D-4D05-BD37-EC581731B5E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81FA1DAA-6D3D-4D05-BD37-EC581731B5E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81FA1DAA-6D3D-4D05-BD37-EC581731B5E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DDF21AF-D176-42E3-8232-F2746A6E4466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DDF21AF-D176-42E3-8232-F2746A6E4466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DDF21AF-D176-42E3-8232-F2746A6E4466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DDF21AF-D176-42E3-8232-F2746A6E4466}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +66,8 @@ Global
 		{6D6AB277-8DF5-4E13-A2C4-8111B5BE350F} = {04AB0E3E-0116-46C0-B332-BB6E05192684}
 		{F1A675B9-56C5-43D7-922D-1E0C530EFBD6} = {04AB0E3E-0116-46C0-B332-BB6E05192684}
 		{E9FF63C2-28AD-4097-ADC8-EC0DF83C80BA} = {1314BD04-01B7-4B58-B82D-8380D09DE55F}
+		{81FA1DAA-6D3D-4D05-BD37-EC581731B5E4} = {3E3C2A33-BCE6-4272-ADE9-CB6F6891E451}
+		{6DDF21AF-D176-42E3-8232-F2746A6E4466} = {1314BD04-01B7-4B58-B82D-8380D09DE55F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79231B34-9F4A-47D3-9F78-361A755A4427}
