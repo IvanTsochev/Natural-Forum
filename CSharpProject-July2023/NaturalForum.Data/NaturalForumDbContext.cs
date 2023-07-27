@@ -5,8 +5,9 @@
 	using Microsoft.EntityFrameworkCore;
 
 	using NaturalForum.Data.Models;
+    using System.Reflection;
 
-	public class NaturalForumDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
+    public class NaturalForumDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
 	{
 		public NaturalForumDbContext(DbContextOptions<NaturalForumDbContext> options)
 			: base(options)
@@ -23,20 +24,10 @@
 
 		protected override void OnModelCreating(ModelBuilder builder)
 		{
-			builder.Entity<UserArticle>()
-				.HasKey(ua => new { ua.UserId, ua.ArticleId });
+			Assembly configAssembly = Assembly.GetAssembly(typeof(NaturalForumDbContext)) ??
+									  Assembly.GetExecutingAssembly();
 
-			builder.Entity<UserArticle>()
-				.HasOne(ua => ua.Article)
-				.WithMany(u => u.Likes)
-				.HasForeignKey(u => u.ArticleId)
-				.OnDelete(DeleteBehavior.Restrict);
-
-			builder.Entity<UserArticle>()
-				.HasOne(ua => ua.User)
-				.WithMany(c => c.LikedArticles)
-				.HasForeignKey(au => au.UserId)
-				.OnDelete(DeleteBehavior.Restrict);
+			builder.ApplyConfigurationsFromAssembly(configAssembly);
 
 			base.OnModelCreating(builder);
 		}

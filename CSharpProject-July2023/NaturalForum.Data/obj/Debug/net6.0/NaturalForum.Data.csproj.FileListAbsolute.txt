@@ -17,3 +17,22 @@ D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum
 D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\NaturalForum.Common.pdb
 D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\NaturalForum.Data.Models.pdb
 D:\Coding\SoftUni\C#\ASP.NET\Project Defence\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\NaturalForum.Data.csproj.CopyComplete
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\NaturalForum.Data.deps.json
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\NaturalForum.Data.runtimeconfig.json
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\NaturalForum.Data.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\ref\NaturalForum.Data.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\NaturalForum.Data.pdb
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\NaturalForum.Common.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\NaturalForum.Data.Models.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\NaturalForum.Common.pdb
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\bin\Debug\net6.0\NaturalForum.Data.Models.pdb
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\NaturalForum.Data.csproj.AssemblyReference.cache
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\NaturalForum.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\NaturalForum.Data.AssemblyInfoInputs.cache
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\NaturalForum.Data.AssemblyInfo.cs
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\NaturalForum.Data.csproj.CoreCompileInputs.cache
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\NaturalForum.Data.csproj.CopyComplete
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\NaturalForum.Data.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\ref\NaturalForum.Data.dll
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\NaturalForum.Data.pdb
+D:\GitHub\Natural-Forum\CSharpProject-July2023\NaturalForum.Data\obj\Debug\net6.0\NaturalForum.Data.genruntimeconfig.cache

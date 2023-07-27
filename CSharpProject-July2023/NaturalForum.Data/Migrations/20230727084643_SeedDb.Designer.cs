@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NaturalForum.Data;
 
@@ -11,9 +12,10 @@ using NaturalForum.Data;
 namespace NaturalForum.Data.Migrations
 {
     [DbContext(typeof(NaturalForumDbContext))]
-    partial class NaturalForumDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230727084643_SeedDb")]
+    partial class SeedDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
