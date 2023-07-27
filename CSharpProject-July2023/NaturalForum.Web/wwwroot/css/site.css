@@ -1,18 +1,61 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+
+.custom-container {
+    position: relative;
+    height: 250px;
+    border: 1px solid #4CAF50;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(76, 175, 80, 0.7);
+}
+
+.custom-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-name {
+    margin: 0;
+    color: #ffffff;
+}
+
+.btn-details {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-details:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-details:focus {
+    box-shadow: none;
 }

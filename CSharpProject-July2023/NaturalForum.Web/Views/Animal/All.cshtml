@@ -1,11 +1,26 @@
 ﻿@model IEnumerable<AnimalViewModel>
 
 @{
-	ViewData["Title"] = "Animal wiki";
+	ViewData["Title"] = "Tree wiki";
 
-	var trees = Model.ToList();
+	var animals = Model.ToList();
 }
 
-<div class="text-center">
-    <h1 class="display-4">Animal wiki</h1>
+<div class="container mt-4">
+	<h1 class="text-white">Trees Collection</h1>
+	<div class="row">
+		@foreach (var animal in animals)
+		{
+			<div class="col-md-4 mb-4">
+				<div class="custom-container" style="background-image: url('@animal.ImageUrl');">
+					<div class="overlay">
+						<div class="custom-info">
+							<h3 class="custom-name">@animal.Name</h3>
+							<a href="@Url.Action("Details", "Tree", new { id = animal.Id })" class="btn btn-primary btn-details">Details</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
 </div>

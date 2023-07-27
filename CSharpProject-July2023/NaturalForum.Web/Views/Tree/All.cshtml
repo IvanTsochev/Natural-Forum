@@ -6,6 +6,21 @@
 	var trees = Model.ToList();
 }
 
-<div class="text-center">
-    <h1 class="display-4">Tree wiki</h1>
+<div class="container mt-4">
+	<h1 class="text-white">Trees Collection</h1>
+	<div class="row">
+		@foreach (var tree in trees)
+		{
+			<div class="col-md-4 mb-4">
+				<div class="custom-container" style="background-image: url('@tree.ImageUrl');">
+					<div class="overlay">
+						<div class="custom-info">
+							<h3 class="custom-name">@tree.Name</h3>
+							<a href="@Url.Action("Details", "Tree", new { id = tree.Id })" class="btn btn-primary btn-details">Details</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
 </div>
