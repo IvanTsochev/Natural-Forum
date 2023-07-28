@@ -6,5 +6,7 @@
         Task<IEnumerable<AnimalViewModel>> AllAnimalsAsync();
 
         Task<AnimalDetailsViewModel> GetAnimalDetailsAsync(int id);
+
+        Task<bool> AnimalExistsByIdAsync(int id);
     }
 }

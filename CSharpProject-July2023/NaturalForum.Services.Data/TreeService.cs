@@ -46,5 +46,14 @@
 
             return treeDetails;
         }
+
+        public async Task<bool> TreeExistByIdAsync(int id)
+        {
+            bool result = await this.dbContext
+                .Trees
+                .AnyAsync(t => t.Id == id);
+
+            return result;
+        }
     }
 }

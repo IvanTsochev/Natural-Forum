@@ -5,6 +5,8 @@
     using NaturalForum.Services.Data.Interfaces;
     using NaturalForum.Web.ViewModels.Animal;
 
+    using static Common.NotificationMessagesConstants;
+
     public class AnimalController : Controller
     {
         private readonly IAnimalService animalService;
@@ -24,6 +26,16 @@
 
         public async Task<IActionResult> Details(int id)
         {
+            bool animalExist = await this.animalService
+                .AnimalExistsByIdAsync(id);
+
+            if (!animalExist)
+            {
+                TempData[ErrorMessage] = "There was an erro!";
+
+                return RedirectToAction("All", "Animal");
+            }
+
             AnimalDetailsViewModel viewModel = 
                 await this.animalService.GetAnimalDetailsAsync(id);
 

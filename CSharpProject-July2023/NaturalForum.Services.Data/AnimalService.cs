@@ -29,6 +29,15 @@
             return allAnimals;
         }
 
+        public async Task<bool> AnimalExistsByIdAsync(int id)
+        {
+            bool result = await this.dbContext
+                .Animals
+                .AnyAsync(a => a.Id == id);
+
+            return result;
+        }
+
         public async Task<AnimalDetailsViewModel> GetAnimalDetailsAsync(int id)
         {
             AnimalDetailsViewModel animalDetails = await this.dbContext

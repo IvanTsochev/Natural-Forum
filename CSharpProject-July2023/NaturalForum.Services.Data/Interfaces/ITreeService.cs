@@ -6,5 +6,7 @@
         Task<IEnumerable<TreeViewModel>> AllTreesAsync();
 
         Task<TreeDetailsViewModel> GetTreeDetailsAsync(int id);
+
+        Task<bool> TreeExistByIdAsync(int id);
     }
 }

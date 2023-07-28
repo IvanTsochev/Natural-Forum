@@ -4,6 +4,8 @@
 
     using NaturalForum.Services.Data.Interfaces;
     using NaturalForum.Web.ViewModels.Tree;
+
+    using static Common.NotificationMessagesConstants;
     public class TreeController : Controller
     {
         private readonly ITreeService treeService;
@@ -24,6 +26,15 @@
 
         public async Task<IActionResult> Details(int id)
         {
+            bool treeExist = await this.treeService.TreeExistByIdAsync(id);
+
+            if (!treeExist)
+            {
+                TempData[ErrorMessage] = "There was an erro!";
+
+                return RedirectToAction("All", "Tree");
+            }
+
             TreeDetailsViewModel viewModel =
                 await this.treeService.GetTreeDetailsAsync(id);
 
