@@ -21,5 +21,13 @@
 
             return View(viewModel);
         }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            TreeDetailsViewModel viewModel =
+                await this.treeService.GetTreeDetailsAsync(id);
+
+            return View(viewModel);
+        }
     }
 }

@@ -29,5 +29,22 @@
 
             return allTrees;
         }
+
+        public async Task<TreeDetailsViewModel> GetTreeDetailsAsync(int id)
+        {
+            TreeDetailsViewModel treeDetails = await this.dbContext
+                .Trees
+                .Where(t => t.Id == id)
+                .Select(t => new TreeDetailsViewModel()
+                {
+                    Id = t.Id,
+                    Name = t.Name,
+                    Description = t.Description,
+                    ImageUrl = t.ImageUrl
+                })
+                .FirstAsync();
+
+            return treeDetails;
+        }
     }
 }
