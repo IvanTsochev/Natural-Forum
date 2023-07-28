@@ -21,5 +21,13 @@
 
             return View(viewModel);
         }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            AnimalDetailsViewModel viewModel = 
+                await this.animalService.GetAnimalDetailsAsync(id);
+
+            return View(viewModel);
+        }
     }
 }

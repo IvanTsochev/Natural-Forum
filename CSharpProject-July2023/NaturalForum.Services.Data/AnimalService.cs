@@ -28,5 +28,23 @@
 
             return allAnimals;
         }
+
+        public async Task<AnimalDetailsViewModel> GetAnimalDetailsAsync(int id)
+        {
+            AnimalDetailsViewModel animalDetails = await this.dbContext
+                .Animals
+                .Where(a => a.Id == id)
+                .Select(a => new AnimalDetailsViewModel()
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    ImageUrl = a.ImageUrl,
+                    Description = a.Description,
+                    Family = a.Family,
+                })
+                .FirstAsync();
+
+            return animalDetails;
+        }
     }
 }

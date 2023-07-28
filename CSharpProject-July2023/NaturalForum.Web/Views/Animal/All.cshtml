@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<AnimalViewModel>
 
 @{
-	ViewData["Title"] = "Tree wiki";
+	ViewData["Title"] = "Animal wiki";
 
 	var animals = Model.ToList();
 }
 
 <div class="container mt-4">
-	<h1 class="text-white">Trees Collection</h1>
+	<h1 class="text-white">Animals Collection</h1>
 	<div class="row">
 		@foreach (var animal in animals)
 		{
@@ -16,7 +16,7 @@
 					<div class="overlay">
 						<div class="custom-info">
 							<h3 class="custom-name">@animal.Name</h3>
-							<a href="@Url.Action("Details", "Tree", new { id = animal.Id })" class="btn btn-primary btn-details">Details</a>
+							<a asp-controller="Animal" asp-action="Details" asp-route-id="@animal.Id" class="btn btn-primary btn-details">Details</a>
 						</div>
 					</div>
 				</div>

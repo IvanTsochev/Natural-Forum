@@ -16,7 +16,7 @@
 					<div class="overlay">
 						<div class="custom-info">
 							<h3 class="custom-name">@tree.Name</h3>
-							<a href="@Url.Action("Details", "Tree", new { id = tree.Id })" class="btn btn-primary btn-details">Details</a>
+							<a asp-controller="Tree" asp-action="Details" asp-route-id="@tree.Id" class="btn btn-primary btn-details">Details</a>
 						</div>
 					</div>
 				</div>

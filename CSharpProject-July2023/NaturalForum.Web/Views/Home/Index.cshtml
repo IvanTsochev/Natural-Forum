@@ -2,7 +2,36 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-4">
+    <div class="row">
+        <!-- Left column with text -->
+        <div class="col-md-6">
+            <!-- Existing content -->
+            <h1 class="display-4">Welcome to Natural Forum</h1>
+            <p class="lead">
+                Natural Forum is a platform dedicated to the wonders of the natural world. Our mission is to provide a hub for nature enthusiasts, researchers, and explorers to delve into the rich tapestry of trees and animals that make our planet so extraordinary.
+            </p>
+            <p class="lead">
+                If you're not logged in, don't worry; there's still plenty to explore. Our comprehensive "Tree Wiki" and "Animal Wiki" offer a vast repository of information about various species, their habitats, and their ecological significance. Simply click on the word "tree" or "animal" below to access the respective pages:
+            </p>
+            <ul class="lead">
+                <li>
+                    Explore the <a href="@Url.Action("All", "Tree")">Tree Wiki</a> to learn about the diverse range of trees, from ancient giants to delicate blossoms.
+                </li>
+                <li>
+                    Dive into the <a href="@Url.Action("All", "Animal")">Animal Wiki</a> to discover the fascinating world of creatures, from tiny insects to majestic mammals.
+                </li>
+            </ul>
+            <p class="lead">
+                However, if you log in, you gain additional privileges. Registered users can create and view articles, share their insights, and engage in discussions about the natural world. Your profile page showcases all your liked articles, making it easy to keep track of your contributions and interests.
+            </p>
+            <p class="lead">
+                <a href="/Identity/Account/Register">Join</a> Natural Forum today and embark on a journey of knowledge and discovery in the realm of nature!
+            </p>
+        </div>
+        <!-- Right column with picture -->
+        <div class="col-md-6">
+            <img src="https://assets.nst.com.my/images/articles/03xxworld_1596384698.jpg" alt="Trees" class="img-fluid rounded">
+        </div>
+    </div>
 </div>

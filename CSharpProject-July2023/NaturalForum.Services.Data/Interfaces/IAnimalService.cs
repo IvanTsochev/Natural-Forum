@@ -4,5 +4,7 @@
     public interface IAnimalService
     {
         Task<IEnumerable<AnimalViewModel>> AllAnimalsAsync();
+
+        Task<AnimalDetailsViewModel> GetAnimalDetailsAsync(int id);
     }
 }
