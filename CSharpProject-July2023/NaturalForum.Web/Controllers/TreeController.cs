@@ -30,7 +30,7 @@
 
             if (!treeExist)
             {
-                TempData[ErrorMessage] = "There was an erro!";
+                TempData[ErrorMessage] = "There was an error!";
 
                 return RedirectToAction("All", "Tree");
             }
