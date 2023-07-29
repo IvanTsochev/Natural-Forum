@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ArticleViewModel>
+
+@{
+	ViewData["Title"] = "Articles";
+
+	var articles = Model.ToList();
+}
+
+<div class="container mt-4">
+	@if (@articles.Any())
+	{
+		<h1>Articles</h1>
+		<div class="row">
+			@foreach (var article in articles)
+			{
+				<div class="col-md-4 mb-4">
+					<div class="custom-container" style="background-image: url('@article.ImageUrl');">
+						<div class="overlay">
+							<div class="custom-info">
+								<h3 class="custom-name">@article.Title</h3>
+								<a asp-controller="Animal" asp-action="Details" asp-route-id="@article.Id" class="btn btn-primary btn-details">Details</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	}
+	else
+	{
+		<h1>There is no articles yet!</h1>
+		<div class="row">
+			<h3>Be the first one to <a href="@Url.Action("Create", "Article")">create</a> article.</h3>
+		</div>
+	}
+
+</div>

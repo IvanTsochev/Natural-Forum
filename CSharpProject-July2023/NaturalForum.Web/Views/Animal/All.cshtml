@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<AnimalViewModel>
 
 @{
-	ViewData["Title"] = "Animal wiki";
+	ViewData["Title"] = "Animal Wiki";
 
 	var animals = Model.ToList();
 }
 
 <div class="container mt-4">
-	<h1 class="text-white">Animals Collection</h1>
+	<h1>@ViewData["Title"]</h1>
 	<div class="row">
 		@foreach (var animal in animals)
 		{

@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<TreeViewModel>
 
 @{
-	ViewData["Title"] = "Tree wiki";
+	ViewData["Title"] = "Tree Wiki";
 
 	var trees = Model.ToList();
 }
 
 <div class="container mt-4">
-	<h1 class="text-white">Trees Collection</h1>
+	<h1>@ViewData["Title"]</h1>
 	<div class="row">
 		@foreach (var tree in trees)
 		{
