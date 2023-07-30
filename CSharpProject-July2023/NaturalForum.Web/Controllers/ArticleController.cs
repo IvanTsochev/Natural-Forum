@@ -40,14 +40,14 @@
         {
             if (!ModelState.IsValid)
             {
-                TempData[ErrorMessage] = "There was an error!";
-
                 return View(model);
             }
 
             try
             {
-                this.articleService.CreateArticleAsync(model, User.GetId());
+                //to do: service, details article, all view rework
+
+                await this.articleService.CreateArticleAsync(model, User.GetId());
 
                 TempData[SuccessMessage] = "House was added successfully!";
                 return RedirectToAction("All", "Article");

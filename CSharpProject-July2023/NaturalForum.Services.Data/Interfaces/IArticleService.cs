@@ -4,5 +4,7 @@
     public interface IArticleService
     {
         Task<IEnumerable<ArticleViewModel>> AllArticlesAsync();
+
+        Task CreateArticleAsync(ArticleFormViewModel model, string id);
     }
 }

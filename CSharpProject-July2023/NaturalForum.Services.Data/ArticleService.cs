@@ -3,6 +3,7 @@
     using Microsoft.EntityFrameworkCore;
 
     using NaturalForum.Data;
+    using NaturalForum.Data.Models;
     using NaturalForum.Services.Data.Interfaces;
     using NaturalForum.Web.ViewModels.Article;
     public class ArticleService : IArticleService
@@ -29,6 +30,20 @@
                 .ToListAsync();
 
             return articles;
+        }
+
+        public async Task CreateArticleAsync(ArticleFormViewModel model, string id)
+        {
+            Article newArticle = new Article() 
+            {
+                Title = model.Title,
+                ImageUrl = model.ImageUrl,
+                Description = model.Description,
+                CreaterId = Guid.Parse(id)
+            };
+
+            await this.dbContext.Articles.AddAsync(newArticle);
+            await this.dbContext.SaveChangesAsync();
         }
     }
 }
