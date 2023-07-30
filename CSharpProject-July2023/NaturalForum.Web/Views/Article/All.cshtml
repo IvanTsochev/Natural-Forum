@@ -13,14 +13,13 @@
 		<div class="row">
 			@foreach (var article in articles)
 			{
-				<div class="col-md-4 mb-4">
-					<div class="custom-container" style="background-image: url('@article.ImageUrl');">
-						<div class="overlay">
-							<div class="custom-info">
-								<h3 class="custom-name">@article.Title</h3>
-								<a asp-controller="Article" asp-action="Details" asp-route-id="@article.Id" class="btn btn-primary btn-details">Details</a>
-							</div>
-						</div>
+				<div class="card bg-green" style="width: 18rem;">
+					<img src="@article.ImageUrl" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">@article.Title</h5>
+						<p class="card-text text-muted">Created by: @article.CreaterEmail</p>
+						<p class="card-text text-muted">Likes: @article.Likes</p>
+						<a asp-controller="Article" asp-action="Details" asp-route-id="@article.Id" class="btn btn-primary btn-details">Details</a>
 					</div>
 				</div>
 			}

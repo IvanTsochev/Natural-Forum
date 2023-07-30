@@ -45,8 +45,6 @@
 
             try
             {
-                //to do: service, details article, all view rework
-
                 await this.articleService.CreateArticleAsync(model, User.GetId());
 
                 TempData[SuccessMessage] = "House was added successfully!";

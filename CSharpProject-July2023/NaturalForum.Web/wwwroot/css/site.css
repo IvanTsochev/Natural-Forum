@@ -63,3 +63,17 @@ body {
 .btn-hover-effect:hover {
     background-color: #e8e8e8;
 }
+
+.bg-green {
+    background-color: #d4f7d4; /* Light green background color */
+    border: 1px solid #48ad48; /* Dark green border color */
+    border-radius: 10px;
+}
+
+.bg-green .card-title {
+    color: #1a732a; /* Dark green text color for the title */
+}
+
+.bg-green .card-text {
+    color: #4c804c; /* Dark green text color for other text */
+}
