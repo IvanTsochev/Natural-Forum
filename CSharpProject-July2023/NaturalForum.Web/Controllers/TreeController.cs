@@ -30,7 +30,7 @@
 
             if (!treeExist)
             {
-                TempData[ErrorMessage] = "There was an error!";
+                TempData[ErrorMessage] = "We do not found this tree! Try again, later!";
 
                 return RedirectToAction("All", "Tree");
             }

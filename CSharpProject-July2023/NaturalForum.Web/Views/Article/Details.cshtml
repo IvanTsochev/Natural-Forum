@@ -1,0 +1,24 @@
+﻿@model ArticleDetailsViewModel
+
+@{
+	ViewData["Title"] = $"Article details";
+}
+
+<div class="card" style="width: 18rem;">
+    <img src="@Model.ImageUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <p class="card-text">Created by: @Model.CreaterEmail</p>
+        <p class="card-text">Likes: @Model.Likes</p>
+        <p class="card-text">Description: @Model.Description</p>
+        @if (Model.UserIsCreater)
+        {
+            <a asp-controller="Article" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+            <a asp-controller="Article" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+        }
+        else
+        {
+            <button class="btn btn-success" onclick="likeArticle(@Model.Id)">Like</button>
+        }
+    </div>
+</div>

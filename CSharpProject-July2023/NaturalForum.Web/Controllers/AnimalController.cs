@@ -31,7 +31,7 @@
 
             if (!animalExist)
             {
-                TempData[ErrorMessage] = "There was an error!";
+                TempData[ErrorMessage] = "We do not found this animal! Try again, later!";
 
                 return RedirectToAction("All", "Animal");
             }

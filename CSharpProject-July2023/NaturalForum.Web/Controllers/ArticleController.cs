@@ -45,7 +45,7 @@
 
             try
             {
-                await this.articleService.CreateArticleAsync(model, User.GetId());
+                await this.articleService.CreateArticleAsync(model, User.GetId()!);
 
                 TempData[SuccessMessage] = "House was added successfully!";
                 return RedirectToAction("All", "Article");
@@ -56,6 +56,27 @@
 
                 return View(model);
             }
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+        {
+            bool articleExist = await this.articleService
+                .ArticleExistsByIdAsync(id);
+
+            if (!articleExist)
+            {
+                TempData[ErrorMessage] = "We do not found this article! Try again, later!";
+
+                return RedirectToAction("All", "Animal");
+            }
+
+            ArticleDetailsViewModel viewModel =
+                await this.articleService.GetArticleDetailsAsync(id);
+            viewModel.UserIsCreater = String.Equals(viewModel.CreaterId, User.GetId(),
+                   StringComparison.OrdinalIgnoreCase);
+            return View(viewModel);
         }
     }
 }

@@ -32,6 +32,15 @@
             return articles;
         }
 
+        public async Task<bool> ArticleExistsByIdAsync(int id)
+        {
+            bool result = await this.dbContext
+               .Articles
+               .AnyAsync(a => a.Id == id);
+
+            return result;
+        }
+
         public async Task CreateArticleAsync(ArticleFormViewModel model, string id)
         {
             Article newArticle = new Article() 
@@ -44,6 +53,26 @@
 
             await this.dbContext.Articles.AddAsync(newArticle);
             await this.dbContext.SaveChangesAsync();
+        }
+
+        public async Task<ArticleDetailsViewModel> GetArticleDetailsAsync(int id)
+        {
+            ArticleDetailsViewModel result = await this.dbContext
+                .Articles
+                .Where(x => x.Id == id)
+                .Select(x => new ArticleDetailsViewModel()
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    Description = x.Description,
+                    ImageUrl = x.ImageUrl,
+                    CreaterId = x.CreaterId.ToString(),
+                    CreaterEmail = x.Creater.Email,
+                    Likes = x.Likes.Count()
+                })
+                .FirstAsync();
+
+            return result;
         }
     }
 }
