@@ -77,3 +77,30 @@ body {
 .bg-green .card-text {
     color: #4c804c; /* Dark green text color for other text */
 }
+
+
+.card {
+    /* Set fixed height and width for the card container */
+    height: 320px;
+    width: 18rem;
+    border-radius: 10px;
+}
+
+.card-img-container {
+    /* Set fixed height for the image container */
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top of the image */
+}
+
+.card-img-top {
+    /* Adjust image positioning */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    /* Add padding for the card body */
+    padding: 10px;
+}

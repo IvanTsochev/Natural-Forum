@@ -40,6 +40,7 @@
         {
             if (!ModelState.IsValid)
             {
+                TempData[ErrorMessage] = "Error! Try again!";
                 return View(model);
             }
 
