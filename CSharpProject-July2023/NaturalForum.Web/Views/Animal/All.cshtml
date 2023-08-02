@@ -6,21 +6,34 @@
 	var animals = Model.ToList();
 }
 
+
 <div class="container mt-4">
-	<h1>@ViewData["Title"]</h1>
-	<div class="row">
-		@foreach (var animal in animals)
-		{
-			<div class="col-md-4 mb-4">
-				<div class="custom-container" style="background-image: url('@animal.ImageUrl');">
-					<div class="overlay">
-						<div class="custom-info">
-							<h3 class="custom-name">@animal.Name</h3>
-							<a asp-controller="Animal" asp-action="Details" asp-route-id="@animal.Id" class="btn btn-primary btn-details">Details</a>
+	@if (animals.Any())
+	{
+		<h1>@ViewData["Title"]</h1>
+		<div class="row">
+			@foreach (var animal in animals)
+			{
+				<div class="col-md-4 mb-4">
+					<div class="custom-container" style="background-image: url('@animal.ImageUrl');">
+						<div class="overlay">
+							<div class="custom-info">
+								<h3 class="custom-name">@animal.Name</h3>
+								<a asp-controller="Animal" asp-action="Details" asp-route-id="@animal.Id" class="btn btn-primary btn-details">Details</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		}
-	</div>
+			}
+		</div>
+	}
+
+	else
+	{
+		<h1>There is no information yet!</h1>
+		<div class="row">
+			<h3>Return to <a href="@Url.Action("Index", "Home")">Home</a></h3>
+		</div>
+	}
 </div>
+
