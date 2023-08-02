@@ -20,7 +20,10 @@
             }
             else
             {
-                <a asp-controller="Article" asp-action="Like" asp-route-id="@Model.Id" class="btn btn-success">Like</a>
+                @if (Model.ShowLikeButton)
+                {
+                    <a asp-controller="Article" asp-action="Like" asp-route-id="@Model.Id" class="btn btn-success">Like</a>
+                }
             }
         </div>
         <!-- Right column with animal photo -->

@@ -55,7 +55,18 @@
             await this.dbContext.SaveChangesAsync();
         }
 
-        public async Task<ArticleDetailsViewModel> GetArticleDetailsAsync(int id)
+        public async Task DeleteArticleAsync(int id)
+        {
+            Article articleToDelete = await this.dbContext
+                .Articles
+                .Where(a => id == a.Id)
+                .FirstAsync();
+
+            dbContext.Articles.Remove(articleToDelete);
+            await dbContext.SaveChangesAsync();
+        }
+
+        public async Task<ArticleDetailsViewModel> GetArticleDetailsAsync(int id, Guid userId)
         {
             ArticleDetailsViewModel result = await this.dbContext
                 .Articles
@@ -68,11 +79,63 @@
                     ImageUrl = x.ImageUrl,
                     CreaterId = x.CreaterId.ToString(),
                     CreaterEmail = x.Creater.Email,
+                    ShowLikeButton = true,
                     Likes = x.Likes.Count()
                 })
                 .FirstAsync();
 
+            Article currentArticle = await this.dbContext
+                .Articles
+                .Where(a => a.Id == id)
+                .FirstAsync();
+
+            var test = currentArticle.Likes;
+
+            if (currentArticle.Likes.Any(ua => ua.UserId == userId))
+            {
+                result.ShowLikeButton = false;
+            }
+
             return result;
+        }
+
+        public async Task<ArticleDeleteViewModel> GetArticleForDeleteAsync(int id)
+        {
+            ArticleDeleteViewModel result = await this.dbContext
+                .Articles
+                .Where(x => x.Id == id)
+                .Select(x => new ArticleDeleteViewModel()
+                {
+                    Id = x.Id,
+                    Title = x.Title,
+                    Description = x.Description,
+                    ImageUrl = x.ImageUrl,
+                    CreaterId = x.CreaterId.ToString(),
+                    CreaterEmail = x.Creater.Email,
+                })
+                .FirstAsync();
+
+            return result;
+        }
+
+        public async Task LikeArticleSync(int articleId, Guid userId)
+        {
+            Article article = await dbContext.Articles.FindAsync(articleId);
+            ApplicationUser user = await dbContext.Users.FindAsync(userId);
+
+            if (article != null && user != null)
+            {
+                UserArticle userArticle = new UserArticle
+                {
+                    UserId = user.Id,
+                    User = user,
+                    ArticleId = article.Id,
+                    Article = article
+                };
+
+                article.Likes.Add(userArticle);
+                await this.dbContext.SaveChangesAsync();
+            }
         }
     }
 }

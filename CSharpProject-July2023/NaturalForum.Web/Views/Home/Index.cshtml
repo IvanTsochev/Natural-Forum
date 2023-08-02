@@ -25,9 +25,12 @@
             <p class="lead">
                 However, if you log in, you gain additional privileges. Registered users can create and view articles, share their insights, and engage in discussions about the natural world. Your profile page showcases all your liked articles, making it easy to keep track of your contributions and interests.
             </p>
-            <p class="lead">
-                <a href="/Identity/Account/Register">Join</a> Natural Forum today and embark on a journey of knowledge and discovery in the realm of nature!
-            </p>
+            @if (!this.User.Identity?.IsAuthenticated ?? false)
+            {
+                <p class="lead">
+                    <a href="/Identity/Account/Register">Join</a> Natural Forum today and embark on a journey of knowledge and discovery in the realm of nature!
+                </p>
+            }
         </div>
         <!-- Right column with picture -->
         <div class="col-md-6">
