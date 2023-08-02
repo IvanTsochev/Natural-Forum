@@ -176,8 +176,34 @@
                 return RedirectToAction("All", "Article");
             }
 
-            //Add viewModel, service logic, view
+            ArticleEditFormViewModel viewModel = await this.articleService
+                .GetArticleForEditAsync(id);
+
             return View(viewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(ArticleEditFormViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            bool articleExist = await this.articleService
+                 .ArticleExistsByIdAsync(model.Id);
+
+            if (!articleExist)
+            {
+                TempData[ErrorMessage] = "We do not found this article! Try again, later!";
+
+                return RedirectToAction("All", "Article");
+            }
+
+            await this.articleService.EditArticleAsync(model);
+
+            TempData[SuccessMessage] = "Article was edited successfully!";
+            return RedirectToAction("Details", "Article", new { id = model.Id });
         }
     }
 }

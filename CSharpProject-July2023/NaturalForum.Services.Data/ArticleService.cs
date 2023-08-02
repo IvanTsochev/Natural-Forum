@@ -6,6 +6,7 @@
     using NaturalForum.Data.Models;
     using NaturalForum.Services.Data.Interfaces;
     using NaturalForum.Web.ViewModels.Article;
+
     public class ArticleService : IArticleService
     {
         private readonly NaturalForumDbContext dbContext;
@@ -66,6 +67,19 @@
             await dbContext.SaveChangesAsync();
         }
 
+        public async Task EditArticleAsync(ArticleEditFormViewModel model)
+        {
+            Article article = await dbContext
+                 .Articles
+                 .FirstAsync(a => a.Id == model.Id);
+
+            article.Title = model.Title;
+            article.ImageUrl = model.ImageUrl;
+            article.Description = model.Description;
+
+            await dbContext.SaveChangesAsync();
+        }
+
         public async Task<ArticleDetailsViewModel> GetArticleDetailsAsync(int id, Guid userId)
         {
             ArticleDetailsViewModel result = await this.dbContext
@@ -115,6 +129,23 @@
                 .FirstAsync();
 
             return result;
+        }
+
+        public async Task<ArticleEditFormViewModel> GetArticleForEditAsync(int articleId)
+        {
+            ArticleEditFormViewModel article = await this.dbContext
+                .Articles
+                .Where(a => a.Id == articleId)
+                .Select(a => new ArticleEditFormViewModel()
+                {
+                    Id = a.Id,
+                    Title = a.Title,
+                    Description = a.Description,
+                    ImageUrl = a.ImageUrl,
+                })
+                .FirstAsync();
+
+            return article;
         }
 
         public async Task LikeArticleAsync(int articleId, Guid userId)

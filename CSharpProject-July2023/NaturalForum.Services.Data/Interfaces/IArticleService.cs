@@ -16,5 +16,8 @@
         Task DeleteArticleAsync(int id);
 
         Task LikeArticleAsync(int articleId, Guid userId);
+
+        Task<ArticleEditFormViewModel> GetArticleForEditAsync(int articleId);
+        Task EditArticleAsync(ArticleEditFormViewModel model);
     }
 }
