@@ -18,5 +18,5 @@
 		[Required]
 		[StringLength(ImageUrlMaxLenght)]
 		public string ImageUrl { get; set; } = null!;
-	}
+    }
 }

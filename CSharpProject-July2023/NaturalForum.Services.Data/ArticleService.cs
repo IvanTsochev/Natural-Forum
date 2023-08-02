@@ -80,6 +80,17 @@
             await dbContext.SaveChangesAsync();
         }
 
+        public async Task<string> GetArticleCreaterIdAsString(int articleId)
+        {
+            string result = await this.dbContext
+                .Articles
+                .Where(x => x.Id == articleId)
+                .Select(x => x.CreaterId.ToString())
+                .FirstAsync();
+
+            return result;
+        }
+
         public async Task<ArticleDetailsViewModel> GetArticleDetailsAsync(int id, Guid userId)
         {
             ArticleDetailsViewModel result = await this.dbContext

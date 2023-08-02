@@ -19,5 +19,7 @@
 
         Task<ArticleEditFormViewModel> GetArticleForEditAsync(int articleId);
         Task EditArticleAsync(ArticleEditFormViewModel model);
+
+        Task<string> GetArticleCreaterIdAsString(int articleId);
     }
 }

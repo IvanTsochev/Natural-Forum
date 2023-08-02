@@ -166,6 +166,19 @@
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
+            string createrId = await this.articleService
+                .GetArticleCreaterIdAsString(id);
+
+            bool UserIsCreater = String.Equals(createrId, User.GetId(),
+                   StringComparison.OrdinalIgnoreCase);
+
+            if (!UserIsCreater)
+            {
+                TempData[ErrorMessage] = "You need to be article creater to edit it!";
+
+                return RedirectToAction("All", "Article");
+            }
+
             bool articleExist = await this.articleService
                  .ArticleExistsByIdAsync(id);
 
@@ -185,6 +198,19 @@
         [HttpPost]
         public async Task<IActionResult> Edit(ArticleEditFormViewModel model)
         {
+            string createrId = await this.articleService
+                .GetArticleCreaterIdAsString(model.Id);
+
+            bool UserIsCreater = String.Equals(createrId, User.GetId(),
+                   StringComparison.OrdinalIgnoreCase);
+
+            if (!UserIsCreater)
+            {
+                TempData[ErrorMessage] = "You need to be article creater to edit it!";
+
+                return RedirectToAction("All", "Article");
+            }
+
             if (!ModelState.IsValid)
             {
                 return View(model);
