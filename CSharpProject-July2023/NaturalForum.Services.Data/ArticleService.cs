@@ -43,7 +43,7 @@
 
         public async Task CreateArticleAsync(ArticleFormViewModel model, string id)
         {
-            Article newArticle = new Article() 
+            Article newArticle = new Article()
             {
                 Title = model.Title,
                 ImageUrl = model.ImageUrl,
@@ -84,14 +84,13 @@
                 })
                 .FirstAsync();
 
-            Article currentArticle = await this.dbContext
-                .Articles
-                .Where(a => a.Id == id)
-                .FirstAsync();
+            Article? currentArticle = await this.dbContext
+                    .Articles
+                    .Include(a => a.Likes)
+                    .Where(a => a.Id == id)
+                    .FirstOrDefaultAsync();
 
-            var test = currentArticle.Likes;
-
-            if (currentArticle.Likes.Any(ua => ua.UserId == userId))
+            if (currentArticle!.Likes.Any(ua => ua.UserId == userId))
             {
                 result.ShowLikeButton = false;
             }
