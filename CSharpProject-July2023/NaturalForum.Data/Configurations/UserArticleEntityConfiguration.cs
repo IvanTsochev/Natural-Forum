@@ -15,7 +15,7 @@
 				.HasOne(ua => ua.Article)
 				.WithMany(u => u.Likes)
 				.HasForeignKey(u => u.ArticleId)
-				.OnDelete(DeleteBehavior.Restrict);
+				.OnDelete(DeleteBehavior.Cascade);
 
 			builder
 				.HasOne(ua => ua.User)

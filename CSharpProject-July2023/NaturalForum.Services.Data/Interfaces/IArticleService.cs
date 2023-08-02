@@ -15,6 +15,6 @@
 
         Task DeleteArticleAsync(int id);
 
-        Task LikeArticleSync(int articleId, Guid userId);
+        Task LikeArticleAsync(int articleId, Guid userId);
     }
 }

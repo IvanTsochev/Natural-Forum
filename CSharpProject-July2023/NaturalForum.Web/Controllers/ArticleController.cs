@@ -48,7 +48,7 @@
             {
                 await this.articleService.CreateArticleAsync(model, User.GetId()!);
 
-                TempData[SuccessMessage] = "House was added successfully!";
+                TempData[SuccessMessage] = "Article was added successfully!";
                 return RedirectToAction("All", "Article");
             }
             catch (Exception)
@@ -156,11 +156,28 @@
 
             Guid userId = Guid.Parse(User.GetId()!);
 
-            await this.articleService.LikeArticleSync(id, userId);
+            await this.articleService.LikeArticleAsync(id, userId);
 
             TempData[InformationMessage] = "You liked this article!";
 
             return RedirectToAction("Details", "Article", new { id = id });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            bool articleExist = await this.articleService
+                 .ArticleExistsByIdAsync(id);
+
+            if (!articleExist)
+            {
+                TempData[ErrorMessage] = "We do not found this article! Try again, later!";
+
+                return RedirectToAction("All", "Article");
+            }
+
+            //Add viewModel, service logic, view
+            return View(viewModel);
         }
     }
 }

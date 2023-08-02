@@ -117,7 +117,7 @@
             return result;
         }
 
-        public async Task LikeArticleSync(int articleId, Guid userId)
+        public async Task LikeArticleAsync(int articleId, Guid userId)
         {
             Article article = await dbContext.Articles.FindAsync(articleId);
             ApplicationUser user = await dbContext.Users.FindAsync(userId);
