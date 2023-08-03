@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj",
+      "projectUniqueName": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj",
       "projectName": "NaturalForum.Common",
-      "projectPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj",
+      "projectPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj",
       "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\obj\\",
+      "outputPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",

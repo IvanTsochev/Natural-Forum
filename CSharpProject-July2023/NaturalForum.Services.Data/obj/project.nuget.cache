@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "icC1jqRnx869VfPJhvabmscZc38REbAhcUc7NNCY6Ly2jxDhefrudR22+7vzCgO3bLG0VKqVwRLOj7UFPUV7vw==",
+  "dgSpecHash": "WjOZIXEhB1sg4bexnN2SxvRVz1ywzF8Gky1p0mgFP0Lv9u/p/VRMBUKSFtgYsd16Q14u6WyBaaMrNg3oJw4KCQ==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Services.Data\\NaturalForum.Services.Data.csproj",
+  "projectFilePath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Services.Data\\NaturalForum.Services.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",

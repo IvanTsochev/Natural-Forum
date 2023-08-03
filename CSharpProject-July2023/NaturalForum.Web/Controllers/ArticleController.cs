@@ -22,10 +22,17 @@
         [HttpGet]
         public async Task<IActionResult> All()
         {
-            IEnumerable<ArticleViewModel> viewModel = 
+            try
+            {
+                IEnumerable<ArticleViewModel> viewModel =
                 await this.articleService.AllArticlesAsync();
 
-            return View(viewModel);
+                return View(viewModel);
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
         }
 
         [HttpGet]
@@ -73,14 +80,21 @@
             }
 
             Guid userId = Guid.Parse(User.GetId()!);
-
-            ArticleDetailsViewModel viewModel =
+            
+            try
+            {
+                ArticleDetailsViewModel viewModel =
                 await this.articleService.GetArticleDetailsAsync(id, userId);
 
-            viewModel.UserIsCreater = String.Equals(viewModel.CreaterId, User.GetId(),
-                   StringComparison.OrdinalIgnoreCase);
+                viewModel.UserIsCreater = String.Equals(viewModel.CreaterId, User.GetId(),
+                       StringComparison.OrdinalIgnoreCase);
 
-            return View(viewModel);
+                return View(viewModel);
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
         }
 
         [HttpGet]
@@ -96,20 +110,27 @@
                 return RedirectToAction("All", "Article");
             }
 
-            ArticleDeleteViewModel viewModel =
+            try
+            {
+                ArticleDeleteViewModel viewModel =
                 await this.articleService.GetArticleForDeleteAsync(id);
 
-            viewModel.UserIsCreater = String.Equals(viewModel.CreaterId, User.GetId(),
-                   StringComparison.OrdinalIgnoreCase);
+                viewModel.UserIsCreater = String.Equals(viewModel.CreaterId, User.GetId(),
+                       StringComparison.OrdinalIgnoreCase);
 
-            if (!viewModel.UserIsCreater)
-            {
-                TempData[ErrorMessage] = "You need to be article creater to delete it!";
+                if (!viewModel.UserIsCreater)
+                {
+                    TempData[ErrorMessage] = "You need to be article creater to delete it!";
 
-                return RedirectToAction("All", "Article");
+                    return RedirectToAction("All", "Article");
+                }
+
+                return View(viewModel);
             }
-            
-            return View(viewModel);
+            catch (Exception)
+            {
+                return GeneralError();
+            }
         }
 
         [HttpPost]
@@ -135,10 +156,17 @@
                 return RedirectToAction("All", "Article");
             }
 
-            await this.articleService.DeleteArticleAsync(int.Parse(id));
+            try
+            {
+                await this.articleService.DeleteArticleAsync(int.Parse(id));
 
-            TempData[WarningMessage] = "The article was successfully deleted!";
-            return RedirectToAction("All", "Article");
+                TempData[WarningMessage] = "The article was successfully deleted!";
+                return RedirectToAction("All", "Article");
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
         }
 
         [HttpGet]
@@ -156,11 +184,18 @@
 
             Guid userId = Guid.Parse(User.GetId()!);
 
-            await this.articleService.LikeArticleAsync(id, userId);
+            try
+            {
+                await this.articleService.LikeArticleAsync(id, userId);
 
-            TempData[InformationMessage] = "You liked this article!";
+                TempData[InformationMessage] = "You liked this article!";
 
-            return RedirectToAction("Details", "Article", new { id = id });
+                return RedirectToAction("Details", "Article", new { id = id });
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
         }
 
         [HttpGet]
@@ -189,10 +224,17 @@
                 return RedirectToAction("All", "Article");
             }
 
-            ArticleEditFormViewModel viewModel = await this.articleService
+            try
+            {
+                ArticleEditFormViewModel viewModel = await this.articleService
                 .GetArticleForEditAsync(id);
 
-            return View(viewModel);
+                return View(viewModel);
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
         }
 
         [HttpPost]
@@ -226,10 +268,25 @@
                 return RedirectToAction("All", "Article");
             }
 
-            await this.articleService.EditArticleAsync(model);
+            try
+            {
+                await this.articleService.EditArticleAsync(model);
 
-            TempData[SuccessMessage] = "Article was edited successfully!";
-            return RedirectToAction("Details", "Article", new { id = model.Id });
+                TempData[SuccessMessage] = "Article was edited successfully!";
+                return RedirectToAction("Details", "Article", new { id = model.Id });
+            }
+            catch (Exception)
+            {
+                return GeneralError();
+            }
+        }
+
+        private IActionResult GeneralError()
+        {
+            TempData[ErrorMessage] =
+                "Unexpected error occurred! Please try again later or contact administrator";
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

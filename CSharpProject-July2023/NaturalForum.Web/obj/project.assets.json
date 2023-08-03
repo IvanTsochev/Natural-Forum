@@ -2393,11 +2393,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web\\NaturalForum.Web.csproj",
+      "projectUniqueName": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web\\NaturalForum.Web.csproj",
       "projectName": "NaturalForum.Web",
-      "projectPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web\\NaturalForum.Web.csproj",
+      "projectPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web\\NaturalForum.Web.csproj",
       "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web\\obj\\",
+      "outputPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2414,23 +2414,23 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj": {
-              "projectPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj"
+            "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj": {
+              "projectPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj"
             },
-            "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Data.Models\\NaturalForum.Data.Models.csproj": {
-              "projectPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Data.Models\\NaturalForum.Data.Models.csproj"
+            "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Data.Models\\NaturalForum.Data.Models.csproj": {
+              "projectPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Data.Models\\NaturalForum.Data.Models.csproj"
             },
-            "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Data\\NaturalForum.Data.csproj": {
-              "projectPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Data\\NaturalForum.Data.csproj"
+            "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Data\\NaturalForum.Data.csproj": {
+              "projectPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Data\\NaturalForum.Data.csproj"
             },
-            "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Services.Data\\NaturalForum.Services.Data.csproj": {
-              "projectPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Services.Data\\NaturalForum.Services.Data.csproj"
+            "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Services.Data\\NaturalForum.Services.Data.csproj": {
+              "projectPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Services.Data\\NaturalForum.Services.Data.csproj"
             },
-            "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.Infrastructure\\NaturalForum.Web.Infrastructure.csproj": {
-              "projectPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.Infrastructure\\NaturalForum.Web.Infrastructure.csproj"
+            "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.Infrastructure\\NaturalForum.Web.Infrastructure.csproj": {
+              "projectPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.Infrastructure\\NaturalForum.Web.Infrastructure.csproj"
             },
-            "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.ViewModels\\NaturalForum.Web.ViewModels.csproj": {
-              "projectPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.ViewModels\\NaturalForum.Web.ViewModels.csproj"
+            "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.ViewModels\\NaturalForum.Web.ViewModels.csproj": {
+              "projectPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.ViewModels\\NaturalForum.Web.ViewModels.csproj"
             }
           }
         }

@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.ViewModels\\NaturalForum.Web.ViewModels.csproj",
+      "projectUniqueName": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.ViewModels\\NaturalForum.Web.ViewModels.csproj",
       "projectName": "NaturalForum.Web.ViewModels",
-      "projectPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.ViewModels\\NaturalForum.Web.ViewModels.csproj",
+      "projectPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.ViewModels\\NaturalForum.Web.ViewModels.csproj",
       "packagesPath": "C:\\Users\\Ivan\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.ViewModels\\obj\\",
+      "outputPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Web.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ivan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj": {
-              "projectPath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj"
+            "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj": {
+              "projectPath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Common\\NaturalForum.Common.csproj"
             }
           }
         }

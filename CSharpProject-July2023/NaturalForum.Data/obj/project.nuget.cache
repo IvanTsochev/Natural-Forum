@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EmC7vpRZxjAKGYvg9s2p84RXPcI8OC6anXuvXh3BFtUNd+/dMQPaTMgOs95rxV9G1u4SRz4Id35bsP/BJbMVaw==",
+  "dgSpecHash": "nqR9if8k01JKFpIGiUQm8Y5MEnHUbXnbIt+RX/1eDSlEmDZb/FjjMrOmkQpGwoDpUFqwnnpevwLZjambNZ1eMA==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Data\\NaturalForum.Data.csproj",
+  "projectFilePath": "D:\\GitHub\\Natural-Forum2023\\Natural-Forum\\CSharpProject-July2023\\NaturalForum.Data\\NaturalForum.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ivan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ivan\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
