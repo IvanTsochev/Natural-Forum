@@ -55,7 +55,7 @@
             {
                 await this.articleService.CreateArticleAsync(model, User.GetId()!);
 
-                TempData[SuccessMessage] = "Article was added successfully!";
+                TempData[InformationMessage] = "Article was added successfully!";
                 return RedirectToAction("All", "Article");
             }
             catch (Exception)
@@ -272,7 +272,7 @@
             {
                 await this.articleService.EditArticleAsync(model);
 
-                TempData[SuccessMessage] = "Article was edited successfully!";
+                TempData[InformationMessage] = "Article was edited successfully!";
                 return RedirectToAction("Details", "Article", new { id = model.Id });
             }
             catch (Exception)
