@@ -65,10 +65,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-if (app.Environment.IsDevelopment())
-{
-    app.SeedAdministrator(GeneralApplicationConstants.DevelompentAdminEmail);
-}
+app.SeedAdministrator(GeneralApplicationConstants.DevelompentAdminEmail);
 
 app.MapDefaultControllerRoute();
 app.MapRazorPages();

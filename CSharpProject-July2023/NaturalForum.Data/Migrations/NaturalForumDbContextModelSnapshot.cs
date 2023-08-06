@@ -304,6 +304,24 @@ namespace NaturalForum.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("9a8a430c-2a8d-4df5-9a83-f200fa8dbf0d"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "507a6d9f-eeae-4b49-aa62-072ab4292476",
+                            Email = "admin@admin.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = true,
+                            NormalizedEmail = "ADMIN@ADMIN.COM",
+                            NormalizedUserName = "ADMIN@ADMIN.COM",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKhnckneONR/8Hs4TdtH9yi7SGnigkeuQS7ndzz4KCF/wskc9c9/YpL+7S8kEVp/ig==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "L7YTGTHBFBYP7VQQRXTMPCSWIB5YWDWS",
+                            TwoFactorEnabled = false,
+                            UserName = "admin@admin.com"
+                        });
                 });
 
             modelBuilder.Entity("NaturalForum.Data.Models.Article", b =>

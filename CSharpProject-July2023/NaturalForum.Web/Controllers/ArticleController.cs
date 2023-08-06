@@ -87,7 +87,7 @@
                 await this.articleService.GetArticleDetailsAsync(id, userId);
 
                 viewModel.UserIsCreater = String.Equals(viewModel.CreaterId, User.GetId(),
-                       StringComparison.OrdinalIgnoreCase);
+                       StringComparison.OrdinalIgnoreCase) || this.User.IsAdmin();
 
                 return View(viewModel);
             }
@@ -116,7 +116,7 @@
                 await this.articleService.GetArticleForDeleteAsync(id);
 
                 viewModel.UserIsCreater = String.Equals(viewModel.CreaterId, User.GetId(),
-                       StringComparison.OrdinalIgnoreCase);
+                       StringComparison.OrdinalIgnoreCase) || this.User.IsAdmin();
 
                 if (!viewModel.UserIsCreater)
                 {
@@ -147,7 +147,7 @@
             }
 
             viewModel.UserIsCreater = String.Equals(viewModel.CreaterId, User.GetId(),
-                   StringComparison.OrdinalIgnoreCase);
+                   StringComparison.OrdinalIgnoreCase) || this.User.IsAdmin();
 
             if (viewModel.UserIsCreater)
             {
@@ -205,7 +205,7 @@
                 .GetArticleCreaterIdAsString(id);
 
             bool UserIsCreater = String.Equals(createrId, User.GetId(),
-                   StringComparison.OrdinalIgnoreCase);
+                   StringComparison.OrdinalIgnoreCase) || this.User.IsAdmin();
 
             if (!UserIsCreater)
             {
@@ -244,7 +244,7 @@
                 .GetArticleCreaterIdAsString(model.Id);
 
             bool UserIsCreater = String.Equals(createrId, User.GetId(),
-                   StringComparison.OrdinalIgnoreCase);
+                   StringComparison.OrdinalIgnoreCase) || this.User.IsAdmin();
 
             if (!UserIsCreater)
             {

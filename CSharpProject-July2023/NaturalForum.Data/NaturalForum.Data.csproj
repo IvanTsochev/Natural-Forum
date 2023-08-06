@@ -20,8 +20,4 @@
     <ProjectReference Include="..\NaturalForum.Data.Models\NaturalForum.Data.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

@@ -50,6 +50,7 @@
 
             UserManager<ApplicationUser> userManager =
                 serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
             RoleManager<IdentityRole<Guid>> roleManager =
                 serviceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
 
