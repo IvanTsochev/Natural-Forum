@@ -1,9 +1,14 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 using NaturalForum.Data;
 using NaturalForum.Data.Models;
 using NaturalForum.Services.Data.Interfaces;
 using NaturalForum.Web.Infrastructure.Extensions;
+
+using NaturalForum.Common;
+
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -26,11 +31,16 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
     options.Password.RequiredLength =
         builder.Configuration.GetValue<int>("Identity:Password:RequiredLength");
 })
+    .AddRoles<IdentityRole<Guid>>()
     .AddEntityFrameworkStores<NaturalForumDbContext>();
 
 builder.Services.AddApplicationServices(typeof(ITreeService));
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews()
+    .AddMvcOptions(options =>
+    {
+        options.Filters.Add<AutoValidateAntiforgeryTokenAttribute>();
+    });
 
 WebApplication app = builder.Build();
 
@@ -54,6 +64,11 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+if (app.Environment.IsDevelopment())
+{
+    app.SeedAdministrator(GeneralApplicationConstants.DevelompentAdminEmail);
+}
 
 app.MapDefaultControllerRoute();
 app.MapRazorPages();
