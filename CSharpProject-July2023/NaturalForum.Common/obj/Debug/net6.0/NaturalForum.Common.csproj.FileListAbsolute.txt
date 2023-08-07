@@ -33,3 +33,4 @@ D:\GitHub\Natural-Forum2023\Natural-Forum\CSharpProject-July2023\NaturalForum.Co
 D:\GitHub\Natural-Forum2023\Natural-Forum\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\NaturalForum.Common.dll
 D:\GitHub\Natural-Forum2023\Natural-Forum\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\ref\NaturalForum.Common.dll
 D:\GitHub\Natural-Forum2023\Natural-Forum\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\NaturalForum.Common.pdb
+D:\GitHub\Natural-Forum2023\Natural-Forum\CSharpProject-July2023\NaturalForum.Common\obj\Debug\net6.0\NaturalForum.Common.csproj.AssemblyReference.cache

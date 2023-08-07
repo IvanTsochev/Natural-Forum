@@ -13,6 +13,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.15" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +24,10 @@
     <ProjectReference Include="..\NaturalForum.Services.Data\NaturalForum.Services.Data.csproj" />
     <ProjectReference Include="..\NaturalForum.Web.Infrastructure\NaturalForum.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\NaturalForum.Web.ViewModels\NaturalForum.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\ViewModels\" />
   </ItemGroup>
 
 </Project>

@@ -6,6 +6,8 @@
 
 	using NaturalForum.Web.ViewModels.Home;
 
+    using static Common.GeneralApplicationConstants;
+
 	public class HomeController : Controller
     {
         public HomeController()
@@ -14,6 +16,11 @@
 
         public IActionResult Index()
         {
+            if (this.User.IsInRole(AdminRoleName))
+            {
+                return this.RedirectToAction("Index", "Home", new { Area = AdminAreaName });
+            }
+
             return View();
         }
 

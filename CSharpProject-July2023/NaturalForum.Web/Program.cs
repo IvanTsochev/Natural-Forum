@@ -8,7 +8,7 @@ using NaturalForum.Services.Data.Interfaces;
 using NaturalForum.Web.Infrastructure.Extensions;
 
 using NaturalForum.Common;
-
+using Microsoft.AspNetCore.Builder;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -65,9 +65,24 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.SeedAdministrator(GeneralApplicationConstants.DevelompentAdminEmail);
+if (app.Environment.IsDevelopment())
+{
+    app.SeedAdministrator(GeneralApplicationConstants.DevelompentAdminEmail);
 
-app.MapDefaultControllerRoute();
-app.MapRazorPages();
+}
+
+app.UseEndpoints(config =>
+{
+    config.MapControllerRoute(
+        name: "areas",
+        pattern: "/{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+
+    config.MapDefaultControllerRoute();
+
+    config.MapRazorPages();
+});
+
+
 
 app.Run();
