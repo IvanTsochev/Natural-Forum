@@ -4,9 +4,11 @@
 
 	using static NaturalForum.Common.EntityValidationConstants.Tree;
 
-	public class TreeFormViewModel
+	public class TreeEditViewModel
     {
-		[Required]
+        public int Id { get; set; }
+
+        [Required]
 		[MaxLength(NameMaxLength)]
 		public string Name { get; set; } = null!;
 

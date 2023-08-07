@@ -12,5 +12,9 @@
         Task CreateTreeAsync(TreeFormViewModel model);
 
         Task DeleteTreeAsync(int id);
+
+        Task<TreeEditViewModel> GetTreeForEditAsync(int articleId);
+
+        Task EditTreeAsync(TreeEditViewModel model);
     }
 }

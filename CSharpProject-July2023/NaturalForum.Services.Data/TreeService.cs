@@ -54,6 +54,19 @@
             await dbContext.SaveChangesAsync();
         }
 
+        public async Task EditTreeAsync(TreeEditViewModel model)
+        {
+            Tree tree = await dbContext
+                 .Trees
+                 .FirstAsync(a => a.Id == model.Id);
+
+            tree.Name = model.Name;
+            tree.ImageUrl = model.ImageUrl;
+            tree.Description = model.Description;
+
+            await dbContext.SaveChangesAsync();
+        }
+
         public async Task<TreeDetailsViewModel> GetTreeDetailsAsync(int id)
         {
             TreeDetailsViewModel treeDetails = await this.dbContext
@@ -69,6 +82,23 @@
                 .FirstAsync();
 
             return treeDetails;
+        }
+
+        public async Task<TreeEditViewModel> GetTreeForEditAsync(int articleId)
+        {
+            TreeEditViewModel tree = await this.dbContext
+                .Trees
+                .Where(a => a.Id == articleId)
+                .Select(a => new TreeEditViewModel()
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    Description = a.Description,
+                    ImageUrl = a.ImageUrl,
+                })
+                .FirstAsync();
+
+            return tree;
         }
 
         public async Task<bool> TreeExistByIdAsync(int id)

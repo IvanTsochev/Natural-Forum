@@ -62,5 +62,46 @@
                 return RedirectToAction("All", "Tree", new { area = "" });
             }
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            try
+            {
+                TreeEditViewModel viewModel = await this.treeService
+                .GetTreeForEditAsync(id);
+
+                return View(viewModel);
+            }
+            catch (Exception)
+            {
+                TempData[ErrorMessage] = "Error while loading!";
+                return RedirectToAction("All", "Tree", new { area = "" });
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(TreeEditViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                TempData[ErrorMessage] = "Error! Try again!";
+                return View(model);
+            }
+
+            try
+            {
+                await this.treeService.EditTreeAsync(model);
+
+                TempData[InformationMessage] = "Tree was edited successfully!";
+                return RedirectToAction("Details", "Tree", new { id = model.Id, area = "" });
+            }
+            catch (Exception)
+            {
+                TempData[ErrorMessage] = "Error while editing!";
+
+                return RedirectToAction("All", "Tree", new { area = "" });
+            }
+        }
     }
 }
