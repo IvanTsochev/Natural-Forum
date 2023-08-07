@@ -43,6 +43,17 @@
             await this.dbContext.SaveChangesAsync();
         }
 
+        public async Task DeleteTreeAsync(int id)
+        {
+            Tree articleToDelete = await this.dbContext
+                .Trees
+                .Where(a => id == a.Id)
+                .FirstAsync();
+
+            dbContext.Trees.Remove(articleToDelete);
+            await dbContext.SaveChangesAsync();
+        }
+
         public async Task<TreeDetailsViewModel> GetTreeDetailsAsync(int id)
         {
             TreeDetailsViewModel treeDetails = await this.dbContext

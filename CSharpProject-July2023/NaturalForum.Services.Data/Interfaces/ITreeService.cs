@@ -10,5 +10,7 @@
         Task<bool> TreeExistByIdAsync(int id);
 
         Task CreateTreeAsync(TreeFormViewModel model);
+
+        Task DeleteTreeAsync(int id);
     }
 }

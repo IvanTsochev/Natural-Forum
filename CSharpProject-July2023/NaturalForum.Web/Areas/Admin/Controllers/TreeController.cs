@@ -44,5 +44,23 @@
                 return View(model);
             }
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                await this.treeService.DeleteTreeAsync(id);
+
+                TempData[InformationMessage] = "Tree was deleted successfully!";
+                return RedirectToAction("All", "Tree", new { area = "" });
+            }
+            catch (Exception)
+            {
+                TempData[ErrorMessage] = "Error while deleting!";
+
+                return RedirectToAction("All", "Tree", new { area = "" });
+            }
+        }
     }
 }
