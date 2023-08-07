@@ -1,28 +1,20 @@
 ﻿@{
 	ViewData["Title"] = "Home Page";
 }
-<div class="mt-4 p-5 bg-light text-center">
-	<h2 class="display-4">Hello, Admin!</h2>
-	<p class="lead mb-1 mt-3">
-		This is your administrator area - you can <b>read</b>, <b>create</b>,
-		<b>delete</b> and <b>edit</b> houses.
-		<br />You can <b>rent</b> and <b>leave</b> the free ones, too!
-	</p>
-	<p class="lead mt-1">
-		You can also see <b>all users and agents</b> and <b>all rents</b> in the
-		system.
-	</p>
-	<hr class="my-4">
-	<a asp-area="" asp-controller="House" asp-action="All"
-	   class="btn btn-primary btn-lg">All Houses</a>
-	<a asp-area="" asp-controller="House" asp-action="Add"
-	   class="btn btn-primary btn-lg">Add House</a>
-	<span> | </span>
-	<a asp-area="Admin" asp-controller="House" asp-action="Mine"
-	   class="btn btn-primary btn-lg">My Houses</a>
-	<span> | </span>
-	<a asp-area="Admin" asp-controller="Rent" asp-action="All"
-	   class="btn btn-primary btn-lg">All Rents</a>
-	<a asp-area="Admin" asp-controller="User" asp-action="All"
-	   class="btn btn-primary btn-lg">All Users</a>
+<div class="mt-4 p-5 bg-success text-center">
+    <h2 class="display-4 text-white">Hello, Admin!</h2>
+    <p class="lead mb-1 mt-3 text-white" style="font-size: 25px;">
+        This is your administrator area - In the forum part of the app you can <b>read</b>, <b>create</b>,
+        <b>delete</b> and <b>edit</b> articles.
+        <br />In the wiki part you can <b>edit or delete</b> existing posts or <b>add</b> new ones!
+    </p>
+    <hr class="my-4">
+    <a asp-area="" asp-controller="Tree" asp-action="All"
+       class="btn btn-success btn-lg">Tree wiki</a>
+    <span class="text-white"> | </span>
+    <a asp-area="" asp-controller="Animal" asp-action="All"
+       class="btn btn-success btn-lg">Animal wiki</a>
+    <span class="text-white"> | </span>
+    <a asp-area="" asp-controller="Article" asp-action="All"
+       class="btn btn-success btn-lg">Articles</a>
 </div>
