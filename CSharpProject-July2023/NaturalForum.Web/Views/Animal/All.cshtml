@@ -4,6 +4,7 @@
 	ViewData["Title"] = "Animal Wiki";
 
 	var animals = Model.ToList();
+	bool isUserAdmin = this.User.IsAdmin();
 }
 
 
@@ -35,5 +36,13 @@
 			<h3>Return to <a href="@Url.Action("Index", "Home")">Home</a></h3>
 		</div>
 	}
+
+	@if (isUserAdmin)
+	{
+		<div class="d-flex justify-content-center">
+			<a asp-area="@AdminAreaName" asp-controller="Animal" asp-action="Create" class="btn btn-info btn-lg">Create</a>
+		</div>
+	}
+
 </div>
 

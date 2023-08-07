@@ -4,6 +4,7 @@
 	ViewData["Title"] = "Tree Wiki";
 
 	var trees = Model.ToList();
+	bool isUserAdmin = this.User.IsAdmin();
 }
 
 <div class="container mt-4">
@@ -32,6 +33,13 @@
 		<h1>There is no information yet!</h1>
 		<div class="row">
 			<h3>Return to <a href="@Url.Action("Index", "Home")">Home</a></h3>
+		</div>
+	}
+
+	@if (isUserAdmin)
+	{
+		<div class="d-flex justify-content-center">
+			<a asp-area="@AdminAreaName" asp-controller="Tree" asp-action="Create" class="btn btn-info btn-lg">Create</a>
 		</div>
 	}
 

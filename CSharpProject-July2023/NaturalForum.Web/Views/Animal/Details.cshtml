@@ -1,7 +1,8 @@
 ﻿@model AnimalDetailsViewModel
 
 @{
-	ViewData["Title"] = $"{Model.Name} details";
+    ViewData["Title"] = $"{Model.Name} details";
+    bool isUserAdmin = this.User.IsAdmin();
 }
 
 <div class="container mt-4">
@@ -17,4 +18,9 @@
             <img src="@Model.ImageUrl" alt="@Model.Name" class="img-fluid rounded shadow-lg">
         </div>
     </div>
+
+    @if(isUserAdmin){
+        <a asp-area="@AdminAreaName" asp-controller="Animal" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+        <a asp-area="@AdminAreaName" asp-controller="Animal" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    }
 </div>
