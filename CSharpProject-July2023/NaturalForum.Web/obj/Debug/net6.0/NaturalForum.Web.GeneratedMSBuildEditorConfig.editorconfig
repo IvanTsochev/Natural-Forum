@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\GitHub\Natural-Forum2023\Natural-Forum\CSharpProject-July2023\NaturalForum.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/GitHub/Natural-Forum2023/Natural-Forum/CSharpProject-July2023/NaturalForum.Web/Areas/Admin/Views/Animal/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQW5pbWFsXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GitHub/Natural-Forum2023/Natural-Forum/CSharpProject-July2023/NaturalForum.Web/Areas/Admin/Views/Animal/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQW5pbWFsXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/GitHub/Natural-Forum2023/Natural-Forum/CSharpProject-July2023/NaturalForum.Web/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

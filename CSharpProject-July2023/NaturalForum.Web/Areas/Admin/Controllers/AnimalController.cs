@@ -2,29 +2,30 @@
 {
     using Microsoft.AspNetCore.Mvc;
 
+    using NaturalForum.Data;
     using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Web.ViewModels.Tree;
+    using NaturalForum.Web.ViewModels.Animal;
 
     using static NaturalForum.Common.NotificationMessagesConstants;
 
-    public class TreeController : BaseAdminController
+    public class AnimalController : BaseAdminController
     {
-        private readonly ITreeService treeService;
+        private readonly IAnimalService animalService;
 
-        public TreeController(ITreeService treeService)
+        public AnimalController(IAnimalService animalService)
         {
-            this.treeService = treeService;
+            this.animalService = animalService;
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-            TreeFormViewModel viewModel = new TreeFormViewModel();
+            AnimalFormViewModel viewModel = new AnimalFormViewModel();
             return View(viewModel);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(TreeFormViewModel model)
+        public async Task<IActionResult> Create(AnimalFormViewModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -34,10 +35,10 @@
 
             try
             {
-                await this.treeService.CreateTreeAsync(model);
+                await this.animalService.CreateAnimalAsync(model);
 
-                TempData[InformationMessage] = "Tree was added successfully!";
-                return RedirectToAction("All", "Tree", new { area = "" });
+                TempData[InformationMessage] = "Animal was added successfully!";
+                return RedirectToAction("All", "Animal", new { area = "" });
             }
             catch (Exception)
             {
@@ -52,16 +53,16 @@
         {
             try
             {
-                await this.treeService.DeleteTreeAsync(id);
+                await this.animalService.DeleteAnimalAsync(id);
 
-                TempData[InformationMessage] = "Tree was deleted successfully!";
-                return RedirectToAction("All", "Tree", new { area = "" });
+                TempData[InformationMessage] = "Animal was deleted successfully!";
+                return RedirectToAction("All", "Animal", new { area = "" });
             }
             catch (Exception)
             {
                 TempData[ErrorMessage] = "Error while deleting!";
 
-                return RedirectToAction("All", "Tree", new { area = "" });
+                return RedirectToAction("All", "Animal", new { area = "" });
             }
         }
 
@@ -70,20 +71,20 @@
         {
             try
             {
-                TreeEditViewModel viewModel = await this.treeService
-                .GetTreeForEditAsync(id);
+                AnimalEditViewModel viewModel = await this.animalService
+                .GetAnimalForEditAsync(id);
 
                 return View(viewModel);
             }
             catch (Exception)
             {
                 TempData[ErrorMessage] = "Error while loading!";
-                return RedirectToAction("All", "Tree", new { area = "" });
+                return RedirectToAction("All", "Animal", new { area = "" });
             }
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(TreeEditViewModel model)
+        public async Task<IActionResult> Edit(AnimalEditViewModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -93,16 +94,16 @@
 
             try
             {
-                await this.treeService.EditTreeAsync(model);
+                await this.animalService.EditAnimalAsync(model);
 
-                TempData[InformationMessage] = "Tree was edited successfully!";
-                return RedirectToAction("Details", "Tree", new { id = model.Id, area = "" });
+                TempData[InformationMessage] = "Animal was edited successfully!";
+                return RedirectToAction("Details", "Animal", new { id = model.Id, area = "" });
             }
             catch (Exception)
             {
                 TempData[ErrorMessage] = "Error while editing!";
 
-                return RedirectToAction("All", "Tree", new { area = "" });
+                return RedirectToAction("All", "Animal", new { area = "" });
             }
         }
     }

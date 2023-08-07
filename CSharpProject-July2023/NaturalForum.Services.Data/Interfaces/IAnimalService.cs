@@ -8,5 +8,13 @@
         Task<AnimalDetailsViewModel> GetAnimalDetailsAsync(int id);
 
         Task<bool> AnimalExistsByIdAsync(int id);
+
+        Task CreateAnimalAsync(AnimalFormViewModel model);
+
+        Task DeleteAnimalAsync(int id);
+
+        Task<AnimalEditViewModel> GetAnimalForEditAsync(int articleId);
+
+        Task EditAnimalAsync(AnimalEditViewModel model);
     }
 }

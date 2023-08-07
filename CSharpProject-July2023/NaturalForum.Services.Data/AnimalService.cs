@@ -2,7 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using NaturalForum.Data;
-
+    using NaturalForum.Data.Models;
     using NaturalForum.Services.Data.Interfaces;
     using NaturalForum.Web.ViewModels.Animal;
     public class AnimalService : IAnimalService
@@ -38,6 +38,45 @@
             return result;
         }
 
+        public async Task CreateAnimalAsync(AnimalFormViewModel model)
+        {
+            Animal newAnimal = new Animal()
+            {
+                Name = model.Name,
+                Family = model.Family,
+                Description = model.Description,
+                ImageUrl = model.ImageUrl,
+            };
+
+            await this.dbContext.Animals.AddAsync(newAnimal);
+            await this.dbContext.SaveChangesAsync();
+        }
+
+        public async Task DeleteAnimalAsync(int id)
+        {
+            Animal animalToDelete = await this.dbContext
+                .Animals
+                .Where(a => id == a.Id)
+                .FirstAsync();
+
+            dbContext.Animals.Remove(animalToDelete);
+            await dbContext.SaveChangesAsync();
+        }
+
+        public async Task EditAnimalAsync(AnimalEditViewModel model)
+        {
+            Animal animal = await dbContext
+                 .Animals
+                 .FirstAsync(a => a.Id == model.Id);
+
+            animal.Name = model.Name;
+            animal.ImageUrl = model.ImageUrl;
+            animal.Family = model.Family;
+            animal.Description = model.Description;
+
+            await dbContext.SaveChangesAsync();
+        }
+
         public async Task<AnimalDetailsViewModel> GetAnimalDetailsAsync(int id)
         {
             AnimalDetailsViewModel animalDetails = await this.dbContext
@@ -54,6 +93,24 @@
                 .FirstAsync();
 
             return animalDetails;
+        }
+
+        public async Task<AnimalEditViewModel> GetAnimalForEditAsync(int articleId)
+        {
+            AnimalEditViewModel animal = await this.dbContext
+                .Animals
+                .Where(a => a.Id == articleId)
+                .Select(a => new AnimalEditViewModel()
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    Family = a.Family,
+                    Description = a.Description,
+                    ImageUrl = a.ImageUrl,
+                })
+                .FirstAsync();
+
+            return animal;
         }
     }
 }

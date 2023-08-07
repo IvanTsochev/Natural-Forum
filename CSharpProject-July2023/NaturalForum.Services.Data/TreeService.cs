@@ -45,12 +45,12 @@
 
         public async Task DeleteTreeAsync(int id)
         {
-            Tree articleToDelete = await this.dbContext
+            Tree treeToDelete = await this.dbContext
                 .Trees
                 .Where(a => id == a.Id)
                 .FirstAsync();
 
-            dbContext.Trees.Remove(articleToDelete);
+            dbContext.Trees.Remove(treeToDelete);
             await dbContext.SaveChangesAsync();
         }
 

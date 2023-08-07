@@ -1,7 +1,7 @@
-﻿@model TreeFormViewModel
+﻿@model AnimalFormViewModel
 
 @{
-	ViewData["Title"] = "Create tree";
+	ViewData["Title"] = "Create animal";
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -20,6 +20,12 @@
     </div>
 
     <div class="form-group">
+        <label for="Title">Family</label>
+        <input type="text" id="Family" name="Family" class="form-control" required />
+        <span asp-validation-for="Family" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
         <label for="ImageUrl">Image URL</label>
         <input type="text" id="ImageUrl" name="ImageUrl" class="form-control" required />
         <span asp-validation-for="ImageUrl" class="text-danger"></span>
@@ -27,3 +33,4 @@
 
     <button type="submit" class="btn btn-primary">Create</button>
 </form>
+
