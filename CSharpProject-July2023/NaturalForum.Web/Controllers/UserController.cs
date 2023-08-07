@@ -2,9 +2,12 @@
 {
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
-    using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Web.ViewModels.User;
+
+    using Services.Data.Interfaces;
+    using Web.ViewModels.User;
+
     using static Infrastructure.Extensions.ClaimsPrincipalExtensions;
+
     public class UserController : Controller
     {
         private readonly IUserService userService;

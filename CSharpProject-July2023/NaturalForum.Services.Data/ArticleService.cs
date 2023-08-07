@@ -4,8 +4,8 @@
 
     using NaturalForum.Data;
     using NaturalForum.Data.Models;
-    using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Web.ViewModels.Article;
+    using Data.Interfaces;
+    using Web.ViewModels.Article;
 
     public class ArticleService : IArticleService
     {

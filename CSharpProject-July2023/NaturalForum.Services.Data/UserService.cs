@@ -2,10 +2,12 @@
 {
     using System;
     using System.Threading.Tasks;
+
     using Microsoft.EntityFrameworkCore;
+
     using NaturalForum.Data;
-    using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Web.ViewModels.User;
+    using Data.Interfaces;
+    using Web.ViewModels.User;
 
     public class UserService : IUserService
     {

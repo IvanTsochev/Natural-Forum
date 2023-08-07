@@ -2,8 +2,8 @@
 {
     using Microsoft.AspNetCore.Mvc;
 
-    using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Web.ViewModels.Animal;
+    using Services.Data.Interfaces;
+    using Web.ViewModels.Animal;
 
     using static Common.NotificationMessagesConstants;
 

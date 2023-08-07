@@ -2,7 +2,7 @@
 {
 	using System.ComponentModel.DataAnnotations;
 
-	using static NaturalForum.Common.EntityValidationConstants.Tree;
+	using static Common.EntityValidationConstants.Tree;
 
 	public class TreeFormViewModel
     {

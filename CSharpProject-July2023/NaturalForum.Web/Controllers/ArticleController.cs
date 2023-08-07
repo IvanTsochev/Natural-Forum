@@ -3,8 +3,8 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
-    using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Web.ViewModels.Article;
+    using Services.Data.Interfaces;
+    using Web.ViewModels.Article;
 
     using static Infrastructure.Extensions.ClaimsPrincipalExtensions;
     using static Common.NotificationMessagesConstants;

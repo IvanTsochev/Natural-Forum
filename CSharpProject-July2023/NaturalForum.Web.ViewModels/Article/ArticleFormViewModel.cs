@@ -1,6 +1,7 @@
 ﻿namespace NaturalForum.Web.ViewModels.Article
 {
 	using System.ComponentModel.DataAnnotations;
+
 	using static Common.EntityValidationConstants.Article;
 	public class ArticleFormViewModel
     {

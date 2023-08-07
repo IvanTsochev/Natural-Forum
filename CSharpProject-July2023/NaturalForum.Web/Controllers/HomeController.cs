@@ -1,10 +1,6 @@
 ﻿namespace NaturalForum.Web.Controllers
 {
-    using System.Diagnostics;
-
     using Microsoft.AspNetCore.Mvc;
-
-	using NaturalForum.Web.ViewModels.Home;
 
     using static Common.GeneralApplicationConstants;
 

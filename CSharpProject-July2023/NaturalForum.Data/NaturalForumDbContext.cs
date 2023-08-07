@@ -1,11 +1,13 @@
 ﻿namespace NaturalForum.Data
 {
+	using System.Reflection;
+
 	using Microsoft.AspNetCore.Identity;
 	using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 	using Microsoft.EntityFrameworkCore;
 
-	using NaturalForum.Data.Models;
-    using System.Reflection;
+	using Models;
+    
 
     public class NaturalForumDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
 	{

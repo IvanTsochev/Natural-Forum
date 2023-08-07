@@ -3,7 +3,7 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-    using NaturalForum.Data.Models;
+    using Models;
     public class UserArticleEntityConfiguration : IEntityTypeConfiguration<UserArticle>
     {
         public void Configure(EntityTypeBuilder<UserArticle> builder)

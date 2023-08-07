@@ -2,8 +2,8 @@
 {
     using Microsoft.AspNetCore.Mvc;
 
-    using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Web.ViewModels.Tree;
+    using Services.Data.Interfaces;
+    using Web.ViewModels.Tree;
 
     using static Common.NotificationMessagesConstants;
     public class TreeController : Controller

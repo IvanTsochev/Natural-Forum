@@ -3,7 +3,7 @@
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-    using NaturalForum.Data.Models;
+    using Models;
     public class TreeEntityConfiguration : IEntityTypeConfiguration<Tree>
     {
         public void Configure(EntityTypeBuilder<Tree> builder)

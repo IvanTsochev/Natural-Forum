@@ -2,10 +2,10 @@
 {
     using Microsoft.AspNetCore.Mvc;
 
-    using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Web.ViewModels.Tree;
+    using Services.Data.Interfaces;
+    using Web.ViewModels.Tree;
 
-    using static NaturalForum.Common.NotificationMessagesConstants;
+    using static Common.NotificationMessagesConstants;
 
     public class TreeController : BaseAdminController
     {

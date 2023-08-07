@@ -2,11 +2,10 @@
 {
     using Microsoft.AspNetCore.Mvc;
 
-    using NaturalForum.Data;
     using NaturalForum.Services.Data.Interfaces;
     using NaturalForum.Web.ViewModels.Animal;
 
-    using static NaturalForum.Common.NotificationMessagesConstants;
+    using static Common.NotificationMessagesConstants;
 
     public class AnimalController : BaseAdminController
     {

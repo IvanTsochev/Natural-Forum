@@ -8,7 +8,6 @@ using NaturalForum.Services.Data.Interfaces;
 using NaturalForum.Web.Infrastructure.Extensions;
 
 using NaturalForum.Common;
-using Microsoft.AspNetCore.Builder;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
