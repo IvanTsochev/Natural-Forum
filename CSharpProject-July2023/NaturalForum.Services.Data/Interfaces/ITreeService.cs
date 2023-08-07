@@ -8,5 +8,7 @@
         Task<TreeDetailsViewModel> GetTreeDetailsAsync(int id);
 
         Task<bool> TreeExistByIdAsync(int id);
+
+        Task CreateTreeAsync(TreeFormViewModel model);
     }
 }

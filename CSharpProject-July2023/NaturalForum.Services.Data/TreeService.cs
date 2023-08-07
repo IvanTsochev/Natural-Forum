@@ -2,7 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using NaturalForum.Data;
-
+    using NaturalForum.Data.Models;
     using NaturalForum.Services.Data.Interfaces;
     using NaturalForum.Web.ViewModels.Tree;
 
@@ -28,6 +28,19 @@
                 .ToArrayAsync();
 
             return allTrees;
+        }
+
+        public async Task CreateTreeAsync(TreeFormViewModel model)
+        {
+            Tree newTree = new Tree()
+            {
+                Name = model.Name,
+                ImageUrl = model.ImageUrl,
+                Description = model.Description,
+            };
+
+            await this.dbContext.Trees.AddAsync(newTree);
+            await this.dbContext.SaveChangesAsync();
         }
 
         public async Task<TreeDetailsViewModel> GetTreeDetailsAsync(int id)

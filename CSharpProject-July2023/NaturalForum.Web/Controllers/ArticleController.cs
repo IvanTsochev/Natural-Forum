@@ -60,9 +60,7 @@
             }
             catch (Exception)
             {
-                ModelState.AddModelError(string.Empty, "Unexpected error occurred while trying to add your new house! Please try again later or contact administrator!");
-
-                return View(model);
+                return GeneralError();
             }
         }
 
