@@ -4,6 +4,10 @@
 	ViewData["Title"] = "Edit tree";
 }
 
+<br />
+
+<h2>@ViewData["Title"]</h2>
+
 <form asp-action="Edit" method="post">
     <input type="hidden" asp-for="Id" />
 
@@ -20,7 +24,7 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="ImageUrl"></label>
+        <label asp-for="ImageUrl">Image link</label>
         <input asp-for="ImageUrl" class="form-control" />
         <span asp-validation-for="ImageUrl" class="text-danger"></span>
     </div>
