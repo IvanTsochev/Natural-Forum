@@ -35,6 +35,8 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 
 builder.Services.AddApplicationServices(typeof(ITreeService));
 
+builder.Services.AddMemoryCache();
+
 builder.Services.AddControllersWithViews()
     .AddMvcOptions(options =>
     {

@@ -43,7 +43,7 @@
                 Name = "Deer",
                 Family = "Cervidae",
                 Description = "A deer or true deer is a hoofed ruminant mammal of the family Cervidae. The two main groups of deer are the Cervinae, including muntjac, elk, red deer, and fallow deer; and the Capreolinae, including reindeer, white-tailed deer, roe deer, and moose. Male deer of all species, as well as female reindeer, grow and shed new antlers each year. In this, they differ from permanently horned antelope, which are part of a different family (Bovidae) within the same order of even-toed ungulates.",
-                ImageUrl = "https://www.arlingtonva.us/files/sharedassets/public/environment/images/deer.jpg?dimension=pageimagefullwidth&w=992"
+                ImageUrl = "https://www.nyc.gov/assets/wildlifenyc/images/content/pages/Stag_On_A_Hill.jpg"
             };
             animals.Add(animal);
 

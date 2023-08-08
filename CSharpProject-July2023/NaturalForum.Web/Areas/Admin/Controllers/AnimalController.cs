@@ -1,19 +1,24 @@
 ﻿namespace NaturalForum.Web.Areas.Admin.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Caching.Memory;
 
-    using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Web.ViewModels.Animal;
+    using Services.Data.Interfaces;
+    using Web.ViewModels.Animal;
 
     using static Common.NotificationMessagesConstants;
+    using static Common.GeneralApplicationConstants;
 
     public class AnimalController : BaseAdminController
     {
         private readonly IAnimalService animalService;
+        private readonly IMemoryCache memoryCache;
 
-        public AnimalController(IAnimalService animalService)
+        public AnimalController(IAnimalService animalService,
+            IMemoryCache memoryCache)
         {
             this.animalService = animalService;
+            this.memoryCache = memoryCache;
         }
 
         [HttpGet]
@@ -37,6 +42,8 @@
                 await this.animalService.CreateAnimalAsync(model);
 
                 TempData[InformationMessage] = "Animal was added successfully!";
+                this.memoryCache.Remove(AnimalCacheKey);
+
                 return RedirectToAction("All", "Animal", new { area = "" });
             }
             catch (Exception)
@@ -55,6 +62,8 @@
                 await this.animalService.DeleteAnimalAsync(id);
 
                 TempData[InformationMessage] = "Animal was deleted successfully!";
+                this.memoryCache.Remove(AnimalCacheKey);
+
                 return RedirectToAction("All", "Animal", new { area = "" });
             }
             catch (Exception)
@@ -96,6 +105,8 @@
                 await this.animalService.EditAnimalAsync(model);
 
                 TempData[InformationMessage] = "Animal was edited successfully!";
+                this.memoryCache.Remove(AnimalCacheKey);
+
                 return RedirectToAction("Details", "Animal", new { id = model.Id, area = "" });
             }
             catch (Exception)
