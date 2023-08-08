@@ -1,19 +1,24 @@
 ﻿namespace NaturalForum.Web.Areas.Admin.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Caching.Memory;
 
     using Services.Data.Interfaces;
     using Web.ViewModels.Tree;
 
     using static Common.NotificationMessagesConstants;
+    using static Common.GeneralApplicationConstants;
 
     public class TreeController : BaseAdminController
     {
         private readonly ITreeService treeService;
+        private readonly IMemoryCache memoryCache;
 
-        public TreeController(ITreeService treeService)
+        public TreeController(ITreeService treeService,
+            IMemoryCache memoryCache)
         {
             this.treeService = treeService;
+            this.memoryCache = memoryCache;
         }
 
         [HttpGet]
@@ -37,6 +42,8 @@
                 await this.treeService.CreateTreeAsync(model);
 
                 TempData[InformationMessage] = "Tree was added successfully!";
+                this.memoryCache.Remove(TreeCacheKey);
+
                 return RedirectToAction("All", "Tree", new { area = "" });
             }
             catch (Exception)
@@ -55,6 +62,8 @@
                 await this.treeService.DeleteTreeAsync(id);
 
                 TempData[InformationMessage] = "Tree was deleted successfully!";
+                this.memoryCache.Remove(TreeCacheKey);
+
                 return RedirectToAction("All", "Tree", new { area = "" });
             }
             catch (Exception)
@@ -96,6 +105,8 @@
                 await this.treeService.EditTreeAsync(model);
 
                 TempData[InformationMessage] = "Tree was edited successfully!";
+                this.memoryCache.Remove(TreeCacheKey);
+
                 return RedirectToAction("Details", "Tree", new { id = model.Id, area = "" });
             }
             catch (Exception)
