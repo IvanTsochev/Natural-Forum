@@ -1,4 +1,6 @@
-﻿@{
+﻿@using static NaturalForum.Common.GeneralApplicationConstants;
+
+@{
 	ViewData["Title"] = "Home Page";
 }
 <div class="mt-4 p-5 bg-success text-center">
@@ -10,11 +12,14 @@
     </p>
     <hr class="my-4">
     <a asp-area="" asp-controller="Tree" asp-action="All"
-       class="btn btn-success btn-lg">Tree wiki</a>
+       class="btn btn-success btn-lg">Tree Wiki</a>
     <span class="text-white"> | </span>
     <a asp-area="" asp-controller="Animal" asp-action="All"
-       class="btn btn-success btn-lg">Animal wiki</a>
+       class="btn btn-success btn-lg">Animal Wiki</a>
     <span class="text-white"> | </span>
     <a asp-area="" asp-controller="Article" asp-action="All"
        class="btn btn-success btn-lg">Articles</a>
+    <span class="text-white"> | </span>
+    <a asp-area="@AdminAreaName" asp-controller="User" asp-action="All"
+       class="btn btn-success btn-lg">All Users</a>
 </div>

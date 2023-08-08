@@ -1,0 +1,36 @@
+﻿@model IEnumerable<UserServiceViewModel>
+
+@{
+    ViewBag.Title = "All Users";
+}
+
+<h2 class="text-center text-success">@ViewBag.Title</h2>
+<hr />
+<table class="table table-striped" style="background-color: #006400;">
+    <thead>
+        <tr>
+            <th><label class="text-white">Email</label></th>
+            <th><label class="text-white">Posts created</label></th>
+            <th><label class="text-white">User Is Admin</label></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td class="text-white">@user.Email</td>
+                <td class="text-white">@user.PostCreated</td>
+                <td>
+                    @if (user.IsAdmin)
+                    {
+                        <label class="text-center text-success">✔</label>
+                    }
+                    else
+                    {
+                        <label class="text-center text-danger">❌</label>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
