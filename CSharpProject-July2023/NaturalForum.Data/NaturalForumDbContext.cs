@@ -14,6 +14,10 @@
 		public NaturalForumDbContext(DbContextOptions<NaturalForumDbContext> options)
 			: base(options)
 		{
+			if (!this.Database.IsRelational())
+            {
+				this.Database.EnsureCreated();
+            }
 		}
 
 		public DbSet<Tree> Trees { get; set; } = null!;

@@ -40,7 +40,12 @@
       "ProjectGuid": "6ddf21af-d176-42e3-8232-f2746a6e4466",
       "DisplayName": "NaturalForum.Web.Infrastructure",
       "ColorIndex": 6
+    },
+    "c8488809-5d81-4aa4-b293-42467c787bdf": {
+      "ProjectGuid": "c8488809-5d81-4aa4-b293-42467c787bdf",
+      "DisplayName": "NaturalForum.Services.Tests",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 8
 }

@@ -19,9 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalForum.Web.ViewModels
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3E3C2A33-BCE6-4272-ADE9-CB6F6891E451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalForum.Services.Data", "NaturalForum.Services.Data\NaturalForum.Services.Data.csproj", "{81FA1DAA-6D3D-4D05-BD37-EC581731B5E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalForum.Services.Data", "NaturalForum.Services.Data\NaturalForum.Services.Data.csproj", "{81FA1DAA-6D3D-4D05-BD37-EC581731B5E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalForum.Web.Infrastructure", "NaturalForum.Web.Infrastructure\NaturalForum.Web.Infrastructure.csproj", "{6DDF21AF-D176-42E3-8232-F2746A6E4466}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NaturalForum.Web.Infrastructure", "NaturalForum.Web.Infrastructure\NaturalForum.Web.Infrastructure.csproj", "{6DDF21AF-D176-42E3-8232-F2746A6E4466}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FD2C1772-C689-42C7-A08D-7B6F83E3A7AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalForum.Services.Tests", "NaturalForum.Services.Tests\NaturalForum.Services.Tests.csproj", "{C8488809-5D81-4AA4-B293-42467C787BDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,10 @@ Global
 		{6DDF21AF-D176-42E3-8232-F2746A6E4466}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DDF21AF-D176-42E3-8232-F2746A6E4466}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DDF21AF-D176-42E3-8232-F2746A6E4466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8488809-5D81-4AA4-B293-42467C787BDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8488809-5D81-4AA4-B293-42467C787BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8488809-5D81-4AA4-B293-42467C787BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8488809-5D81-4AA4-B293-42467C787BDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +76,7 @@ Global
 		{E9FF63C2-28AD-4097-ADC8-EC0DF83C80BA} = {1314BD04-01B7-4B58-B82D-8380D09DE55F}
 		{81FA1DAA-6D3D-4D05-BD37-EC581731B5E4} = {3E3C2A33-BCE6-4272-ADE9-CB6F6891E451}
 		{6DDF21AF-D176-42E3-8232-F2746A6E4466} = {1314BD04-01B7-4B58-B82D-8380D09DE55F}
+		{C8488809-5D81-4AA4-B293-42467C787BDF} = {FD2C1772-C689-42C7-A08D-7B6F83E3A7AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79231B34-9F4A-47D3-9F78-361A755A4427}
