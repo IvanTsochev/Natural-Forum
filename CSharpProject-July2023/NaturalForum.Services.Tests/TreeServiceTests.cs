@@ -33,7 +33,7 @@ namespace NaturalForum.Services.Tests
 
             this.dbContext.RemoveRange(this.dbContext.Trees);
 
-            SeedDatabase(this.dbContext);
+            SeedTreesInDb(this.dbContext);
 
             this.treeService = new TreeService(this.dbContext);
         }
@@ -43,7 +43,7 @@ namespace NaturalForum.Services.Tests
         {
             this.dbContext.RemoveRange(this.dbContext.Trees);
 
-            SeedDatabase(this.dbContext);
+            SeedTreesInDb(this.dbContext);
         }
 
         [Test]
@@ -67,7 +67,7 @@ namespace NaturalForum.Services.Tests
         }
 
         [Test]
-        public async Task GetAllTreesShoulReturnCaounEqualToEntitysInDb()
+        public async Task GetAllTreesShoulReturnCountEqualToEntitysInDb()
         {
             IEnumerable<TreeViewModel> trees = await this.treeService.AllTreesAsync();
 

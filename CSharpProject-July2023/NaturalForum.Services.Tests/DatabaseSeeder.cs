@@ -7,12 +7,13 @@
     public static class DatabaseSeeder
     {
         public static ICollection<Tree> trees;
-        public static void SeedDatabase(NaturalForumDbContext dbContext)
+        public static ICollection<Animal> animals;
+        public static void SeedTreesInDb(NaturalForumDbContext dbContext)
         {
             trees = new HashSet<Tree>();
 
             Tree tree;
-
+            
             tree = new Tree()
             {
                 Id = 1,
@@ -40,7 +41,48 @@
             };
             trees.Add(tree);
 
-            dbContext.AddRange(trees);
+            dbContext.Trees.AddRange(trees);
+        }
+
+        public static void SeedAnimalsInDb(NaturalForumDbContext dbContext)
+        {
+            dbContext.RemoveRange(dbContext.Animals);
+
+            animals = new HashSet<Animal>();
+
+            Animal animal;
+
+            animal = new Animal()
+            {
+                Id = 1,
+                Name = "Bear",
+                Family = "Ursidae",
+                Description = "Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, South America, Europe, and Asia. Common characteristics of modern bears include large bodies with stocky legs, long snouts, small rounded ears, shaggy hair, plantigrade paws with five nonretractile claws, and short tails.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/9/9e/Ours_brun_parcanimalierpyrenees_1.jpg"
+            };
+            animals.Add(animal);
+
+            animal = new Animal()
+            {
+                Id = 2,
+                Name = "Wild boar",
+                Family = "Suidae",
+                Description = "The wild boar, also known as the wild swine,common wild pig,Eurasian wild pig,or simply wild pig,is a suid native to much of Eurasia and North Africa, and has been introduced to the Americas and Oceania. The species is now one of the widest-ranging mammals in the world, as well as the most widespread suiform.It has been assessed as least concern on the IUCN Red List due to its wide range, high numbers, and adaptability to a diversity of habitats.It has become an invasive species in part of its introduced range.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/d/d2/Wildschwein%2C_N%C3%A4he_Pulverstampftor_%28cropped%29.jpg"
+            };
+            animals.Add(animal);
+
+            animal = new Animal()
+            {
+                Id = 3,
+                Name = "Deer",
+                Family = "Cervidae",
+                Description = "A deer or true deer is a hoofed ruminant mammal of the family Cervidae. The two main groups of deer are the Cervinae, including muntjac, elk, red deer, and fallow deer; and the Capreolinae, including reindeer, white-tailed deer, roe deer, and moose. Male deer of all species, as well as female reindeer, grow and shed new antlers each year. In this, they differ from permanently horned antelope, which are part of a different family (Bovidae) within the same order of even-toed ungulates.",
+                ImageUrl = "https://www.nyc.gov/assets/wildlifenyc/images/content/pages/Stag_On_A_Hill.jpg"
+            };
+            animals.Add(animal);
+
+            dbContext.Animals.AddRange(animals);
         }
     }
 }
