@@ -1,5 +1,7 @@
 ﻿namespace NaturalForum.Services.Tests
 {
+    using System;
+
     using NaturalForum.Data;
     using NaturalForum.Data.Models;
     using System.Collections.Generic;
@@ -8,6 +10,8 @@
     {
         public static ICollection<Tree> trees;
         public static ICollection<Animal> animals;
+        public static ICollection<ApplicationUser> applicationUsers;
+        public static ICollection<Article> articles;
         public static void SeedTreesInDb(NaturalForumDbContext dbContext)
         {
             trees = new HashSet<Tree>();
@@ -46,7 +50,7 @@
 
         public static void SeedAnimalsInDb(NaturalForumDbContext dbContext)
         {
-            dbContext.RemoveRange(dbContext.Animals);
+            dbContext.Animals.RemoveRange(dbContext.Animals);
 
             animals = new HashSet<Animal>();
 
@@ -83,6 +87,26 @@
             animals.Add(animal);
 
             dbContext.Animals.AddRange(animals);
+        }
+
+        public static void SeedArticlesInDb(NaturalForumDbContext dbContext)
+        {
+            articles = new HashSet<Article>();
+
+            Article article;
+
+            article = new Article()
+            {
+                Id = 5,
+                Title = "Test Article",
+                Description = "This description is for test service only xD",
+                ImageUrl = "https://5.imimg.com/data5/AK/RA/MY-68428614/apple-1000x1000.jpg",
+                CreaterId = Guid.Parse("9A8A430C-2A8D-4DF5-9A83-F200FA8DBF0D")
+            };
+
+            articles.Add(article);
+            dbContext.Articles.AddRange(article);
+            dbContext.SaveChanges();
         }
     }
 }

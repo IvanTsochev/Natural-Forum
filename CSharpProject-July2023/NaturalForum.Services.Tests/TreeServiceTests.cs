@@ -6,12 +6,12 @@ namespace NaturalForum.Services.Tests
     using Microsoft.EntityFrameworkCore;
 
     using NaturalForum.Data;
-    using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Services.Data;
+    using Data.Interfaces;
+    using Data;
 
     using static DatabaseSeeder;
     using System.Threading.Tasks;
-    using NaturalForum.Web.ViewModels.Tree;
+    using Web.ViewModels.Tree;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -67,7 +67,7 @@ namespace NaturalForum.Services.Tests
         }
 
         [Test]
-        public async Task GetAllTreesShoulReturnCountEqualToEntitysInDb()
+        public async Task GetAllTreesShoultReturnCountEqualToEntitysInDb()
         {
             IEnumerable<TreeViewModel> trees = await this.treeService.AllTreesAsync();
 
@@ -96,7 +96,7 @@ namespace NaturalForum.Services.Tests
 
             await this.treeService.EditTreeAsync(model);
 
-            bool result = model.Name == trees.Where(x => x.Id == 1).First().Name;
+            bool result = model.Name == trees.First().Name;
 
             Assert.IsTrue(result);
         }

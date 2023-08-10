@@ -9,9 +9,9 @@
     using System.Linq;
 
     using NaturalForum.Data;
-    using NaturalForum.Services.Data.Interfaces;
-    using NaturalForum.Services.Data;
-    using NaturalForum.Web.ViewModels.Animal;
+    using Data.Interfaces;
+    using Data;
+    using Web.ViewModels.Animal;
 
     using static DatabaseSeeder;
 
@@ -31,7 +31,7 @@
 
             this.dbContext = new NaturalForumDbContext(this.dbOptions);
 
-            this.dbContext.RemoveRange(this.dbContext.Trees);
+            this.dbContext.Animals.RemoveRange(this.dbContext.Animals);
 
             SeedAnimalsInDb(this.dbContext);
 
@@ -39,9 +39,9 @@
         }
 
         [TearDown]
-        public void ResetTrees()
+        public void ResetAnimals()
         {
-            this.dbContext.RemoveRange(this.dbContext.Animals);
+            this.dbContext.Animals.RemoveRange(this.dbContext.Animals);
 
             SeedAnimalsInDb(this.dbContext);
         }
