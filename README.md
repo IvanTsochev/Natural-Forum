@@ -23,10 +23,13 @@ A page where the register form for non-users is located.
 
 * Profile -> 
 A page with information for the login user.
+
 * Create Atricle -> 
 A page with a form for creation of articles.
+
 * Edit Atricle -> 
 A page with a form for modification of a particularly selected article.
+
 * Like Functionality ->
 The Like functionality allows users to express their appreciation and interest in articles. By clicking the "Like" button associated with a particular article, users can indicate that they find the content valuable or enjoyable. This interaction provides a way for users to bookmark or track their favorite pieces of information. Liked articles are cataloged in users' profiles.
 
