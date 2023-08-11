@@ -67,7 +67,7 @@
         }
 
         [Test]
-        public async Task GetAllAnimalsShoulReturnCountEqualToEntitysInDb()
+        public async Task GetAllAnimalsShouldReturnCountEqualToEntitiesInDb()
         {
             int count = this.dbContext.Trees.Count();
             IEnumerable<AnimalViewModel> animals = await this.animalService.AllAnimalsAsync();
@@ -110,8 +110,17 @@
             Assert.IsTrue(animals.Count() == 3);
         }
 
+
         [Test]
-        public async Task CreateShoultAddOneEntity()
+        public async Task GetDetailsShouldReturnCorrectEntity()
+        {
+            AnimalDetailsViewModel article = await this.animalService.GetAnimalDetailsAsync(1);
+
+            Assert.IsTrue(article.Name == animals.First().Name);
+        }
+
+        [Test]
+        public async Task CreateShouldAddOneEntity()
         {
             AnimalFormViewModel animalForm = new AnimalFormViewModel()
             {

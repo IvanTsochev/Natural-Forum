@@ -10,7 +10,6 @@
     {
         public static ICollection<Tree> trees;
         public static ICollection<Animal> animals;
-        public static ICollection<ApplicationUser> applicationUsers;
         public static ICollection<Article> articles;
         public static void SeedTreesInDb(NaturalForumDbContext dbContext)
         {
@@ -46,12 +45,11 @@
             trees.Add(tree);
 
             dbContext.Trees.AddRange(trees);
+            dbContext.SaveChanges();
         }
 
         public static void SeedAnimalsInDb(NaturalForumDbContext dbContext)
         {
-            dbContext.Animals.RemoveRange(dbContext.Animals);
-
             animals = new HashSet<Animal>();
 
             Animal animal;
@@ -87,6 +85,7 @@
             animals.Add(animal);
 
             dbContext.Animals.AddRange(animals);
+            dbContext.SaveChanges();
         }
 
         public static void SeedArticlesInDb(NaturalForumDbContext dbContext)

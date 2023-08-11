@@ -66,7 +66,7 @@ namespace NaturalForum.Services.Tests
         }
 
         [Test]
-        public async Task GetAllArticlesShoultReturnCountEqualToEntitysInDb()
+        public async Task GetAllArticlesShouldReturnCountEqualToEntitiesInDb()
         {
             IEnumerable<ArticleViewModel> articles = await this.articleService.AllArticlesAsync();
 
@@ -85,6 +85,16 @@ namespace NaturalForum.Services.Tests
             bool result = model.Title == articles.First().Title;
 
             Assert.IsTrue(result);
+        }
+
+        [Test]
+        public async Task GetArticleCreaterIdAsStringShouldReturnCorrectString()
+        {
+            string result = await this.articleService.GetArticleCreaterIdAsString(5);
+
+            string coorectId = articles.First().CreaterId.ToString();
+
+            Assert.IsTrue(result == coorectId);
         }
 
         [Test]
@@ -111,7 +121,7 @@ namespace NaturalForum.Services.Tests
         }
 
         [Test]
-        public async Task GetDeleteShoulReturnCorrectEntity()
+        public async Task GetDeleteShouldReturnCorrectEntity()
         {
             ArticleDeleteViewModel article = await this.articleService.GetArticleForDeleteAsync(5);
 
@@ -119,7 +129,7 @@ namespace NaturalForum.Services.Tests
         }
 
         [Test]
-        public async Task GetDetailsShoulReturnCorrectEntity()
+        public async Task GetDetailsShouldReturnCorrectEntity()
         {
             ArticleDetailsViewModel article = await this.articleService.GetArticleDetailsAsync(5, Guid.NewGuid());
 
@@ -127,7 +137,7 @@ namespace NaturalForum.Services.Tests
         }
 
         [Test]
-        public async Task CreateShoultAddOneEntity()
+        public async Task CreateShouldAddOneEntity()
         {
             ArticleFormViewModel treeForm = new ArticleFormViewModel()
             {
@@ -139,6 +149,17 @@ namespace NaturalForum.Services.Tests
             await this.articleService.CreateArticleAsync(treeForm, "9A8A430C-2A8D-4DF5-9A83-F200FA8DBF0D");
 
             Assert.IsTrue(this.dbContext.Articles.Count() == 2);
+        }
+
+        [Test]
+        public async Task LikeAtricleShouldAddOneEntityTiUSerLikedArticles()
+        {
+            await this.articleService.LikeArticleAsync(5, Guid.Parse("9A8A430C-2A8D-4DF5-9A83-F200FA8DBF0D"));
+
+            Guid userId = Guid.Parse("9A8A430C-2A8D-4DF5-9A83-F200FA8DBF0D");
+
+            Assert.IsTrue(this.dbContext.Users.Where(x => x.Id == userId)
+                .First().LikedArticles.Count() == 1);
         }
     }
 }

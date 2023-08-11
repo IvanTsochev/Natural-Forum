@@ -67,7 +67,7 @@ namespace NaturalForum.Services.Tests
         }
 
         [Test]
-        public async Task GetAllTreesShoultReturnCountEqualToEntitysInDb()
+        public async Task GetAllTreesShouldReturnCountEqualToEntitiesInDb()
         {
             IEnumerable<TreeViewModel> trees = await this.treeService.AllTreesAsync();
 
@@ -110,7 +110,7 @@ namespace NaturalForum.Services.Tests
         }
 
         [Test]
-        public async Task CreateShoultAddOneEntity()
+        public async Task CreateShouldAddOneEntity()
         {
             TreeFormViewModel treeForm = new TreeFormViewModel()
             {
@@ -122,6 +122,14 @@ namespace NaturalForum.Services.Tests
             await this.treeService.CreateTreeAsync(treeForm);
 
             Assert.IsTrue(this.dbContext.Trees.Count() == 4);
+        }
+
+        [Test]
+        public async Task GetDetailsShouldReturnCorrectEntity()
+        {
+            TreeDetailsViewModel article = await this.treeService.GetTreeDetailsAsync(1);
+
+            Assert.IsTrue(article.Name == trees.First().Name);
         }
     }
 }
