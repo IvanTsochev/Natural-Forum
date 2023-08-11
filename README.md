@@ -12,10 +12,13 @@ This part of the platform is designed for non-registered users. These users have
 
 * Home page -> 
 The central hub of the application, offering users a comprehensive overview and access to essential information about the platform's functionalities and offerings.
+
 * Trees and Animals pages -> 
 A dynamic and engaging section providing users with a wealth of information about various tree and animals species. Browse through an assortment of captivating visuals and names, each linking to detailed pages for further exploration.
+
 * Login-> 
 A page where the login form for already registered users is located.
+
 * Register-> 
 A page where the register form for non-users is located.
 
